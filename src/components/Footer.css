@@ -1,0 +1,12 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 120px; /* Adjust for the new sidebar width */
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  background: #0a192f; /* Dark navy background */
+  border-top: 1px solid #233554; /* Lighter navy/slate border */
+  z-index: 1000;
+  color: #8892b0; /* Muted text color for footer */
+}

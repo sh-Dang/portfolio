@@ -1,0 +1,42 @@
+.sidebar {
+  width: 120px; /* Keep the width for content offset */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex; /* For vertical centering */
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  pointer-events: none; /* Allow clicks to pass through the container */
+}
+
+.sidebar-nav {
+  background-color: #112240; /* Lighter navy/slate */
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: auto; /* Adjust width to content */
+  pointer-events: auto; /* Capture clicks on the nav box */
+}
+
+.sidebar-nav a {
+  padding: 10px 20px; /* More horizontal padding */
+  text-decoration: none;
+  color: #8892b0; /* Muted text color */
+  cursor: pointer;
+  text-align: center;
+  border-radius: 15px; /* Rounded corners for links */
+  transition: color 0.2s; /* Transition color instead of background */
+  font-weight: 500;
+}
+
+.sidebar-nav a:hover {
+  color: #64ffda; /* Accent color on hover */
+}
+
+.sidebar-nav a.active {
+  color: #64ffda; /* Accent color for active link */
+  font-weight: 700; /* Bolder for active */
+}

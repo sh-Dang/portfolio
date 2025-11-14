@@ -14,7 +14,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div>
+    <div className='app'>
       <Header />
       <div className="app-layout">
         <Sidebar />
@@ -30,10 +30,9 @@ function App() {
               </Routes>
             </AnimatePresence>
           </main>
-
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

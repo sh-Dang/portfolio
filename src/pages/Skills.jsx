@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './Skills.css';
 
 const pageVariants = {
   initial: {
@@ -19,7 +20,7 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'easeInOut',
-  duration: 1.5,
+  duration: 0.5,
 };
 
 const Skills = () => {

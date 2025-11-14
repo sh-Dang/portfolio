@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './About.css';
 
 const pageVariants = {
   initial: {
@@ -19,7 +20,7 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'easeInOut',
-  duration: 1.5,
+  duration: 0.5,
 };
 
 const About = () => {
@@ -34,8 +35,8 @@ const About = () => {
     >
       <h2>About Me</h2>
       <p>
-        안녕하세요! 저는 백엔드 개발자 이세형입니다.
-        이곳은 저의 기술적인 여정과 프로젝트들을 기록한 공간입니다.
+        안녕하세요! 저는 백엔드 개발자 이세형입니다.<br></br>
+        이곳은 저의 기술적인 여정과 프로젝트들을 기록한 공간입니다.<br></br>
         문제 해결을 즐기며, 효율적이고 확장 가능한 시스템을 만드는 데 큰 관심을 가지고 있습니다.
       </p>
     </motion.div>

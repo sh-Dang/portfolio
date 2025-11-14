@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import './Projects.css';
 
 const pageVariants = {
   initial: {
@@ -19,7 +20,7 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'easeInOut',
-  duration: 1.5,
+  duration: 0.5,
 };
 
 const Projects = () => {
@@ -46,12 +47,12 @@ const Projects = () => {
       </div>
       <div>
         <h4>프로젝트 2: Peach-Store</h4>
-        <p>설명: Java의 swing을 사용하여 만든 창고관리 시스템입니다.</p>
+        <p>설명: Spring framework를 사용하여 만든 쇼핑몰 웹사이트입니다.</p>
         <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
       </div>
       <div>
         <h4>프로젝트 3: Tabletopia</h4>
-        <p>설명: Java의 swing을 사용하여 만든 창고관리 시스템입니다.</p>
+        <p>설명: Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.</p>
         <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
       </div>
     </motion.div>

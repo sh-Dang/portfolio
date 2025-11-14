@@ -2,9 +2,9 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color: #ccd6f6; /* Light text color for dark background */
-  background-color: #0a192f; /* Dark navy background */
+  margin: 0px;
+  color: #ccd6f6; /* 어두운 배경을 위한 밝은 텍스트 색상 */
+  background-color: #0a192f; /* 어두운 네이비 배경 */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,15 +14,15 @@
 
 a {
   font-weight: 500;
-  color: #64ffda; /* Accent color for links */
+  color: #64ffda; /* 링크에 강조 색상 */
   text-decoration: inherit;
 }
 a:hover {
-  color: #64ffda; /* Keep accent color on hover */
+  color: #64ffda; /* 호버 시 강조 색상 유지 */
 }
 
 body {
-  margin: 0;
+  margin: 0 !important;
 }
 
 h1 {
@@ -37,8 +37,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #112240; /* Lighter navy for buttons */
-  color: #64ffda; /* Accent color for button text */
+  background-color: #112240; /* 버튼을 위한 더 밝은 네이비 */
+  color: #64ffda; /* 버튼 텍스트에 강조 색상 */
   cursor: pointer;
   transition: border-color 0.25s;
 }

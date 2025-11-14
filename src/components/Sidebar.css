@@ -1,42 +1,43 @@
 .sidebar {
-  width: 120px; /* Keep the width for content offset */
+  width: 140px; /* 콘텐츠 오프셋을 위한 너비 유지 */
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex; /* For vertical centering */
+  display: flex; /* 수직 중앙 정렬을 위해 */
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
-  align-items: center; /* Horizontally center content */
-  pointer-events: none; /* Allow clicks to pass through the container */
+  justify-content: center; /* 콘텐츠를 수직 중앙 정렬 */
+  align-items: center; /* 콘텐츠를 수평 중앙 정렬 */
+  pointer-events: none; /* 컨테이너를 통해 클릭이 전달되도록 허용 */
 }
 
 .sidebar-nav {
-  background-color: #112240; /* Lighter navy/slate */
+  background-color: #5078be; /* 더 밝은 네이비/슬레이트 */
   border-radius: 20px;
+  margin-left: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  width: auto; /* Adjust width to content */
-  pointer-events: auto; /* Capture clicks on the nav box */
+  width: auto; /* 콘텐츠에 맞게 너비 조정 */
+  pointer-events: auto; /* 내비게이션 상자에서 클릭 캡처 */
 }
 
 .sidebar-nav a {
-  padding: 10px 20px; /* More horizontal padding */
+  padding: 10px 20px; /* 더 많은 수평 패딩 */
   text-decoration: none;
-  color: #8892b0; /* Muted text color */
+  color: #8892b0; /* 음소거된 텍스트 색상 */
   cursor: pointer;
   text-align: center;
-  border-radius: 15px; /* Rounded corners for links */
-  transition: color 0.2s; /* Transition color instead of background */
+  border-radius: 15px; /* 링크의 둥근 모서리 */
+  transition: color 0.2s; /* 배경 대신 색상 전환 */
   font-weight: 500;
 }
 
 .sidebar-nav a:hover {
-  color: #64ffda; /* Accent color on hover */
+  color: #64ffda; /* 호버 시 강조 색상 */
 }
 
 .sidebar-nav a.active {
-  color: #64ffda; /* Accent color for active link */
-  font-weight: 700; /* Bolder for active */
+  color: #64ffda; /* 활성 링크에 강조 색상 */
+  font-weight: 700; /* 활성 링크는 더 굵게 */
 }

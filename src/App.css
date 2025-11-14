@@ -1,24 +1,28 @@
+.app{
+  margin: 0;
+  min-height: 100vh; /* 루트가 전체 뷰포트 높이를 덮도록 보장 */
+  background-color: #112240; /* 콘텐츠 영역에 일관된 배경 설정 */
+}
+
 .app-layout {
   display: flex;
-  padding-top: 80px; /* Add padding for the fixed header */
+  padding-top: 80px; /* 고정된 헤더를 위한 패딩 추가 */
 }
 
 .content {
-  margin-left: 120px; /* Sidebar width + some padding */
+  margin-left: 120px; /* 사이드바 너비 + 약간의 패딩 */
   padding: 20px;
   width: 100%;
-  padding-bottom: 80px; /* Add padding to prevent footer overlap */
-  background-color: transparent;
+  padding-bottom: 80px; /* 푸터 겹침 방지를 위한 패딩 추가 */
+  background-color: #112240; /* 콘텐츠 영역에 일관된 배경 설정 */
 }
 
 .section {
   padding: 40px 20px;
-  border-bottom: 1px solid #233554; /* Lighter navy/slate border */
-  color: #ccd6f6; /* Ensure text in sections uses the light theme color */
-  background-color: transparent;
+  color: #ccd6f6; /* 섹션 텍스트가 밝은 테마 색상을 사용하도록 보장 */
 }
 
 .section h2 {
-  color: #64ffda; /* Use accent color for section titles */
+  color: #64ffda; /* 섹션 제목에 강조 색상 사용 */
   margin-top: 0;
 }

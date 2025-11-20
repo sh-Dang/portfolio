@@ -1,3 +1,38 @@
 .section {
   padding: 20px;
 }
+
+.profile-photo {
+  display: block;
+  margin: 0 0 20px 0; /* Left-align the image */
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%; /* Optional: for a circular image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #64ffda; /* Accent color */
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #e6f1ff; /* Lighter color on hover */
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}

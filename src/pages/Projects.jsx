@@ -23,6 +23,27 @@ const pageTransition = {
   duration: 0.5,
 };
 
+const projects = [
+  {
+    title: 'Shinlogis-WMS',
+    description: 'Java의 swing을 사용하여 만든 창고관리 시스템입니다.',
+    imageUrl: '/shinlogis.png',
+    githubUrl: 'https://github.com/zero5ive',
+  },
+  {
+    title: 'Peach-Store',
+    description: 'Spring framework를 사용하여 만든 쇼핑몰 웹사이트입니다.',
+    imageUrl: '/peachstore.png',
+    githubUrl: 'https://github.com/zero5ive',
+  },
+  {
+    title: 'Tabletopia',
+    description: 'Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.',
+    imageUrl: '/TableTopia.png',
+    githubUrl: 'https://github.com/zero5ive',
+  },
+];
+
 const Projects = () => {
   return (
     <motion.div
@@ -34,26 +55,19 @@ const Projects = () => {
       className="section"
     >
       <h2>Projects</h2>
-      <p>
-        이곳에 진행했던 프로젝트들에 대한 설명을 추가할 예정입니다.
-        각 프로젝트의 기술 스택, 역할, 그리고 성과를 중심으로 작성해주세요.
-        (예: 쇼핑몰 백엔드, 블로그 API 서버 등)
-      </p>
-      {/* 프로젝트 예시 */}
-      <div>
-        <h4>프로젝트 1: Shinlogis-WMS</h4>
-        <p>설명: Java의 swing을 사용하여 만든 창고관리 시스템입니다.</p>
-        <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-      </div>
-      <div>
-        <h4>프로젝트 2: Peach-Store</h4>
-        <p>설명: Spring framework를 사용하여 만든 쇼핑몰 웹사이트입니다.</p>
-        <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-      </div>
-      <div>
-        <h4>프로젝트 3: Tabletopia</h4>
-        <p>설명: Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.</p>
-        <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <img src={project.imageUrl} alt={project.title} className="project-image" />
+            <div className="project-info">
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     </motion.div>
   );

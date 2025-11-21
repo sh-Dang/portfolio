@@ -1,0 +1,27 @@
+name: Portfolio CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t lee-portfolio:latest .
+
+      - name: Copy and Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            docker pull lee-portfolio:latest || true
+            docker stop leesport || true
+            docker rm leesport || true
+            docker run -d --name leesport -p 8888:8888 lee-portfolio:latest

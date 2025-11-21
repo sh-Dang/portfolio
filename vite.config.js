@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio/', // 레포 이름으로 변경
+  base: '/lee-portfolio/', // 저장소 이름과 일치시키기
 })

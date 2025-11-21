@@ -21,7 +21,7 @@
 ---
 
 ## 🌍 배포
-- 사이트 URL: [https://username.github.io/portfolio](https://username.github.io/portfolio)  
+- 사이트 URL: [https://username.github.io/portfolio](https://sh-Dang.github.io/portfolio)  
   *(GitHub Pages에서 호스팅)*
 
 ---

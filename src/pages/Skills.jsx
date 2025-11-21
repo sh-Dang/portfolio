@@ -33,15 +33,12 @@ const Skills = () => {
       transition={pageTransition}
       className="section"
     >
-      <h2>Skills</h2>
-      <p>
-        보유하고 있는 기술 스택을 나열합니다.
-      </p>
+      <h2>Tech Stacks</h2>
       <ul>
-        <li>Languages: Java, Python, JavaScript</li>
-        <li>Frameworks: Spring Boot, Django, Node.js</li>
-        <li>Databases: MySQL, PostgreSQL, MongoDB</li>
-        <li>Tools: Git, Docker, Jenkins</li>
+        <li>Languages: Java, HTML, JavaScript</li>
+        <li>Frameworks: Spring Boot, React.js</li>
+        <li>Databases: MySQL, Oracle</li>
+        <li>Tools: Git, Docker</li>
       </ul>
     </motion.div>
   );

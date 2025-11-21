@@ -14,14 +14,14 @@
 ---
 
 ## ✨ 주요 기능
-- 📱 반응형 디자인 (PC / 모바일)  
-- 📂 프로젝트 및 기술 스택 소개  
+- 📱 PC / 모바일 호환
+- 📂 프로젝트 및 기술 스택 소개
 - ⚡ GitHub Actions를 통한 자동 배포 (커밋 시 GitHub Pages 업데이트)
 
 ---
 
 ## 🌍 배포
-- 사이트 URL: [https://username.github.io/portfolio](https://sh-Dang.github.io/portfolio)  
+- 사이트 URL: [https://sh-Dang.github.io/portfolio](https://sh-Dang.github.io/portfolio)  
   *(GitHub Pages에서 호스팅)*
 
 ---

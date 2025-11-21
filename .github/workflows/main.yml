@@ -27,10 +27,3 @@ jobs:
       # 4️⃣ 빌드
       - name: Build project
         run: npm run build
-
-      # 5️⃣ GitHub Pages 배포
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Vite는 빌드 결과물이 dist 폴더

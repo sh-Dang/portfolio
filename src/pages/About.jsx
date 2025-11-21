@@ -38,10 +38,10 @@ const About = () => {
       <p>
         안녕하세요! 저는 백엔드 개발자를 희망하고있는 이세형입니다.<br></br>
         이곳은 저의 기술적인 여정과 프로젝트들을 기록한 공간입니다.<br></br>
-        안정적이면서 확장 가능한 시스템을 만드는 데 큰 관심을 가지고 있습니다.
+        안정적이면서 확장 가능한 시스템을 만드는 데 관심을 가지고 있습니다.
       </p>
       <div className="social-links">
-        <a href="https://github.com/zero5ive" target="_blank" rel="noopener noreferrer" className="social-link">
+        <a href="https://github.com/sh-Dang" target="_blank" rel="noopener noreferrer" className="social-link">
           <img src={`${import.meta.env.BASE_URL}gitlogo.png`} alt="GitHub" className="social-icon" />
           <span>GitHub</span>
         </a>

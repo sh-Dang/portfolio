@@ -28,19 +28,19 @@ const projects = [
     title: 'Shinlogis-WMS',
     description: 'Java의 swing을 사용하여 만든 창고관리 시스템입니다.',
     imageUrl: `${import.meta.env.BASE_URL}shinlogis.png`,
-    githubUrl: 'https://github.com/zero5ive',
+    githubUrl: 'https://github.com/zero5ive/Shinlogis-WMS',
   },
   {
     title: 'Peach-Store',
     description: 'Spring framework를 사용하여 만든 쇼핑몰 웹사이트입니다.',
     imageUrl: `${import.meta.env.BASE_URL}peachstore.png`,
-    githubUrl: 'https://github.com/zero5ive',
+    githubUrl: 'https://github.com/zero5ive/Peach-Store',
   },
   {
     title: 'Tabletopia',
     description: 'Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.',
     imageUrl: `${import.meta.env.BASE_URL}TableTopia.png`,
-    githubUrl: 'https://github.com/zero5ive',
+    githubUrl: 'https://github.com/zero5ive/Tabletopia',
   },
 ];
 

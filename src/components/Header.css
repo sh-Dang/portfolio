@@ -9,6 +9,7 @@
   padding-bottom: 20px;
   z-index: 1000;
   text-align: left; /* 제목을 중앙에 정렬 */
+  padding-left: 50px;
 }
 
 .header h1 {

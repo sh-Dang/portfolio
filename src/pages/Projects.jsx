@@ -25,11 +25,11 @@ const pageTransition = {
 
 const projects = [
   {
-    title: 'Shinlogis-WMS',
-    description: 'Java의 swing을 사용하여 만든 창고관리 시스템입니다.',
-    detailedDescription: '이 프로젝트는 CRUD에 대한 기본 감각을 익히기 위해 WMS(Warehouse Management System)의 핵심 기능을 구현한 데스크톱 애플리케이션입니다. 입고, 출고, 재고 관리 및 보고서 생성 기능을 포함하고 있습니다. Java Swing을 사용하여 GUI를 구축했으며, JDBC를 통해 데이터베이스와 연동됩니다.',
-    imageUrl: `${import.meta.env.BASE_URL}shinlogis.png`,
-    githubUrl: 'https://github.com/zero5ive/Shinlogis-WMS',
+    title: 'Tabletopia',
+    description: 'Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.',
+    detailedDescription: '실시간 예약 기능 구현을 위해 WebSocket을 활용했으며, 점주와 고객 간의 양방향 통신을 지원합니다. Spring Boot, Spring Security, JPA, QueryDSL을 사용하여 백엔드를 구축했고, Redis를 이용해 예약 가능 시간 등 빠른 조회가 필요한 데이터를 캐싱 처리했습니다. 프론트엔드는 React와 함께 Tailwind CSS를 사용해 구현되었습니다.',
+    imageUrl: `${import.meta.env.BASE_URL}TableTopia.png`,
+    githubUrl: 'https://github.com/zero5ive/Tabletopia',
   },
   {
     title: 'Peach-Store',
@@ -39,11 +39,11 @@ const projects = [
     githubUrl: 'https://github.com/zero5ive/Peach-Store',
   },
   {
-    title: 'Tabletopia',
-    description: 'Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.',
-    detailedDescription: '실시간 예약 기능 구현을 위해 WebSocket을 활용했으며, 점주와 고객 간의 양방향 통신을 지원합니다. Spring Boot, Spring Security, JPA, QueryDSL을 사용하여 백엔드를 구축했고, Redis를 이용해 예약 가능 시간 등 빠른 조회가 필요한 데이터를 캐싱 처리했습니다. 프론트엔드는 React와 함께 Tailwind CSS를 사용해 구현되었습니다.',
-    imageUrl: `${import.meta.env.BASE_URL}TableTopia.png`,
-    githubUrl: 'https://github.com/zero5ive/Tabletopia',
+    title: 'Shinlogis-WMS',
+    description: 'Java의 swing을 사용하여 만든 창고관리 시스템입니다.',
+    detailedDescription: '이 프로젝트는 CRUD에 대한 기본 감각을 익히기 위해 WMS(Warehouse Management System)의 핵심 기능을 구현한 데스크톱 애플리케이션입니다. 입고, 출고, 재고 관리 및 보고서 생성 기능을 포함하고 있습니다. Java Swing을 사용하여 GUI를 구축했으며, JDBC를 통해 데이터베이스와 연동됩니다.',
+    imageUrl: `${import.meta.env.BASE_URL}shinlogis.png`,
+    githubUrl: 'https://github.com/zero5ive/Shinlogis-WMS',
   },
 ];
 

@@ -70,7 +70,6 @@ const Skills = () => {
       transition={pageTransition}
       className="section"
     >
-      <h2>Tech Stacks</h2>
       <div className="category-grid">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-category">

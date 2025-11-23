@@ -1,21 +1,41 @@
 .section {
   padding: 20px;
+  line-height: 1.8;
+}
+
+.about-me-container{
+  display: flex;
+  align-items: flex-start;
 }
 
 .profile-photo {
-  display: block;
-  margin: 0 0 20px 0; /* Left-align the image */
   max-width: 200px;
   height: auto;
-  border-radius: 50%; /* Optional: for a circular image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a subtle shadow */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-top: 3rem;
+}
+
+.about-me-container .about-me-text h2 {
+  color: #e6f1ff;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #64ffda;
+}
+
+.about-me-text {
+  color: #e6f1ff;
+  margin-left: 50px;
 }
 
 .social-links {
   display: flex;
   gap: 20px;
   margin-top: 20px;
-  justify-content: flex-start; /* Align to the left */
+  justify-content: flex-start;
 }
 
 .social-link {
@@ -35,4 +55,26 @@
   width: 32px;
   height: 32px;
   margin-right: 8px;
+}
+
+.section .section-content h2 {
+    border-bottom: 2px solid #64ffda;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #e6f1ff;
+}
+
+.section-content h3 {
+    color: #64ffda;
+    margin-top: 20px;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.why-backend-item {
+    margin-bottom: 20px;
 }

@@ -31,30 +31,30 @@ const skillCategories = [
   {
     title: 'Languages',
     skills: [
-      { logoUrl: javaLogo },
-      { logoUrl: htmlLogo },
-      { logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
+      { logoUrl: javaLogo, proficiency: 70 }, //Java
+      { logoUrl: htmlLogo, proficiency: 80 }, //HTML
+      { logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', proficiency: 75 }, //javaScript
     ],
   },
   {
     title: 'Frameworks & Libraries',
     skills: [
-      { logoUrl: springLogo },
-      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+      { logoUrl: springLogo, proficiency: 65 }, //Spring Boot
+      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', proficiency: 70 }, //React
     ],
   },
   {
     title: 'Databases',
     skills: [
-      { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg' },
-      { logoUrl: redisLogo }
+      { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
+      { logoUrl: redisLogo, proficiency: 50 }
     ],
   },
   {
     title: 'Tools & Others',
     skills: [
-      { logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg' },
-      { logoUrl: 'https://static.cdnlogo.com/logos/d/17/docker.svg' },
+      { logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg', proficiency: 80 },
+      { logoUrl: 'https://static.cdnlogo.com/logos/d/17/docker.svg', proficiency: 50 },
     ],
   },
 ];
@@ -76,9 +76,18 @@ const Skills = () => {
             <h3>{category.title}</h3>
             <div className="skills-grid">
               {category.skills.map((skill, sIndex) => (
-                <div key={sIndex} className="skill-card">
-                  <img src={skill.logoUrl} alt={`${skill.name} logo`} className="skill-logo" />
-                  <span>{skill.name}</span>
+                <div key={sIndex} className="skill-item">
+                  <div className="skill-card">
+                    <img src={skill.logoUrl} alt={`${skill.name} logo`} className="skill-logo" />
+                    <span>{skill.name}</span>
+                  </div>
+                  <div className="proficiency-bar-container">
+                    <div
+                      className="proficiency-bar"
+                      style={{ width: `${skill.proficiency}%` }}
+                    ></div>
+                  </div>
+                  <span className="proficiency-text">{skill.proficiency}%</span>
                 </div>
               ))}
             </div>

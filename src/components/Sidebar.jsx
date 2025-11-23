@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <nav className="sidebar-nav">
-        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Me</NavLink>
         <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>Projects</NavLink>
         <NavLink to="/skills" className={({ isActive }) => isActive ? "active" : ""}>Stacks</NavLink>
       </nav>

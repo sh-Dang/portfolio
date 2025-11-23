@@ -1,10 +1,10 @@
-h2{
-  color: #e6f1ff;
-  border-bottom: #64ffda 2px solid;
-}
-
 .section {
   padding: 20px;
+}
+
+.section h2{
+  border-bottom: #64ffda 2px solid;
+  color: #e6f1ff;
 }
 
 .projects-grid {
@@ -40,7 +40,7 @@ h2{
 
 .project-info h4 {
   margin-top: 0;
-  color: #e6f1ff; /* 제목에 더 밝은 색상 */
+  color: #64ffda; /* 제목에 더 밝은 색상 */
 }
 
 .project-info .detailed-description {
@@ -57,26 +57,48 @@ h2{
 }
 
 .toggle-button {
-  background: #64ffda;
+  background: #e6f1ff;
   color: #0a192f;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  display: inline-flex; /* Flexbox 사용하여 내부 콘텐츠 정렬 */
+  align-items: center;
+  justify-content: center;
+  line-height: normal; /* 라인 높이 정규화 */
 }
 
 .toggle-button:hover {
-  background: #50d9c2;
+  background: #0a192f;
+  color: #e6f1ff;
 }
 
 .project-info a {
   text-decoration: none;
-  color: #64ffda; /* 강조 색상 */
+  color: #0a192f;
   font-weight: bold;
 }
 
-.project-info a:hover {
-  text-decoration: underline;
+.github-button {
+  background: #e6f1ff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none; /* 링크의 기본 밑줄 제거 */
+  display: inline-flex; /* Flexbox 사용하여 내부 콘텐츠 정렬 */
+  align-items: center;
+  justify-content: center;
+  line-height: normal; /* 라인 높이 정규화 */
+}
+
+.github-button:hover {
+  background: #0a192f;
+  color: #e6f1ff;
+  text-decoration: none;
 }

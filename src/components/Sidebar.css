@@ -1,5 +1,5 @@
 .sidebar {
-  width: 140px; /* 콘텐츠 오프셋을 위한 너비 유지 */
+  width: 160px; /* 콘텐츠 오프셋을 위한 너비 유지 */
   height: 100vh;
   position: fixed;
   top: 0;

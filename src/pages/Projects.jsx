@@ -78,7 +78,7 @@ const Projects = () => {
                 <button onClick={() => handleToggle(index)} className="toggle-button">
                   {expandedIndex === index ? '간략히' : '자세히 보기'}
                 </button>
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-button">
                   GitHub Repository
                 </a>
               </div>

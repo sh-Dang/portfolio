@@ -58,23 +58,23 @@
 }
 
 .section .section-content h2 {
-    border-bottom: 2px solid #64ffda;
-    padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #e6f1ff;
+  border-bottom: 2px solid #64ffda;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #e6f1ff;
 }
 
 .section-content h3 {
-    color: #64ffda;
-    margin-top: 20px;
+  color: #64ffda;
 }
 
 .experience-item ul {
-    list-style-type: disc;
-    margin-left: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.why-backend-item {
-    margin-bottom: 20px;
+.why-backend-item p{
+  margin-bottom: 20px;
+  margin-left: 20px;
 }

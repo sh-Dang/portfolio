@@ -10,7 +10,7 @@
 }
 
 .content {
-  margin-left: 120px; /* 사이드바 너비 + 약간의 패딩 */
+  margin-left: 150px; /* 사이드바 너비 + 약간의 패딩 */
   padding: 20px;
   width: 100%;
   padding-bottom: 80px; /* 푸터 겹침 방지를 위한 패딩 추가 */
@@ -23,6 +23,6 @@
 }
 
 .section h2 {
-  color: #64ffda; /* 섹션 제목에 강조 색상 사용 */
+  color: #ccd6f6;
   margin-top: 0;
 }

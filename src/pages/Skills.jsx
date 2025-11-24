@@ -40,7 +40,7 @@ const skillCategories = [
     title: 'Frameworks & Libraries',
     skills: [
       { logoUrl: springLogo, proficiency: 65 }, //Spring Boot
-      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', proficiency: 70 }, //React
+      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', proficiency: 60 }, //React
     ],
   },
   {

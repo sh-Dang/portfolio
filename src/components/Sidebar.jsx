@@ -8,6 +8,7 @@ const Sidebar = () => {
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Stacks</a>
+        <a href="#certificated">Certificated</a>
       </nav>
     </div>
   );

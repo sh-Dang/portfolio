@@ -5,6 +5,7 @@ import javaLogo from '../assets/javalogo.png';
 import htmlLogo from '../assets/htmllogo.png';
 import springLogo from '../assets/springlogo.png';
 import redisLogo from '../assets/redislogo.png';
+import jpaLogo from '../assets/jpaLogo.png';
 
 const pageVariants = {
   initial: {
@@ -44,10 +45,12 @@ const skillCategories = [
     ],
   },
   {
-    title: 'Databases',
+    title: 'Databases/ORM',
     skills: [
       { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
-      { logoUrl: redisLogo, proficiency: 50 }
+      { logoUrl: redisLogo, proficiency: 50 },
+      { logoUrl: jpaLogo, proficiency: 50 }
+
     ],
   },
   {

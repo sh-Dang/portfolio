@@ -48,9 +48,8 @@ const skillCategories = [
     title: 'Databases/ORM',
     skills: [
       { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
-      { logoUrl: redisLogo, proficiency: 50 },
-      { logoUrl: jpaLogo, proficiency: 50 }
-
+      { logoUrl: jpaLogo, proficiency: 50 },
+      { logoUrl: redisLogo, proficiency: 50 }
     ],
   },
   {
@@ -73,6 +72,7 @@ const Skills = () => {
       transition={pageTransition}
       className="section"
     >
+      <h2>Stacks</h2>
       <div className="category-grid">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-category">

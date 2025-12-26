@@ -77,9 +77,7 @@ const About = () => {
             <li>팀 프로젝트를 통한 요구사항 분석, API 명세서 작성, 배포 경험</li>
           </ul>
         </div>
-
-        <h2>Why Backend Developer?</h2>
-        <div className="why-backend-item">
+        {/* <div className="why-backend-item">
           <h3>비즈니스와 기술을 연결하는 개발자</h3>
           <p>
             다양한 현장 경험을 통해 실제 비즈니스 문제를 이해하고, 이를 기술로 해결하는 백엔드 개발자가 되고자 합니다.<br />
@@ -101,7 +99,7 @@ const About = () => {
             다양한 실무 경험을 통해 길러진 상황 대처 능력과 문제 해결 능력<br />
             사용자 관점에서 생각하고 최적의 솔루션을 찾는 개발자
           </p>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );

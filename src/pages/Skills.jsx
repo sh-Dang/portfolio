@@ -84,13 +84,13 @@ const Skills = () => {
                     <img src={skill.logoUrl} alt={`${skill.name} logo`} className="skill-logo" />
                     <span>{skill.name}</span>
                   </div>
-                  <div className="proficiency-bar-container">
+                  {/* <div className="proficiency-bar-container">
                     <div
                       className="proficiency-bar"
                       style={{ width: `${skill.proficiency}%` }}
                     ></div>
                   </div>
-                  <span className="proficiency-text">{skill.proficiency}%</span>
+                  <span className="proficiency-text">{skill.proficiency}%</span> */}
                 </div>
               ))}
             </div>

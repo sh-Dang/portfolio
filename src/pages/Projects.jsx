@@ -27,7 +27,7 @@ const pageTransition = {
 const projects = [
   {
     title: 'Tabletopia',
-    description: 'Spring Boot를 사용하여 만든 실시간 레스토랑 예약 서비스 입니다.',
+    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n 2. Redis Sentinel 도입으로 SPOF를 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
     period: '2025.09.08 ~ 2025.10.20 (6주)',
     team: '5명',
     detailedDescription: [

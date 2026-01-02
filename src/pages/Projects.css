@@ -102,3 +102,7 @@
   color: #e6f1ff;
   text-decoration: none;
 }
+
+.project-info p {
+  white-space: pre-line;
+}

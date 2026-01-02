@@ -5,7 +5,7 @@ import javaLogo from '../assets/javalogo.png';
 import htmlLogo from '../assets/htmllogo.png';
 import springLogo from '../assets/springlogo.png';
 import redisLogo from '../assets/redislogo.png';
-import jpaLogo from '../assets/jpaLogo.png';
+import jpaLogo from '../assets/jpalogo.png';
 
 const pageVariants = {
   initial: {

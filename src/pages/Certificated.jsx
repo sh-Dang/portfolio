@@ -25,6 +25,10 @@ const pageTransition = {
 
 const certificates = [
   {
+    name: '컴퓨터\n활용능력 2급',
+    date: '2015.05'
+  },
+  {
     name: 'SQLD\n(SQL 개발자)',
     date: '2025.12',
   },

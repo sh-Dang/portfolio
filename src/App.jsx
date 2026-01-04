@@ -7,6 +7,7 @@ import Skills from './pages/Skills';
 import Footer from './components/Footer';
 import './App.css';
 import Certificated from './pages/Certificated';
+import Experiences from './pages/Experiences';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
             {/* about me */}
             <section id="about">
               <About />
+            </section>
+            {/* 활동 */}
+            <section id="experiences">
+              <Experiences/>
             </section>
             {/* 프로젝트 */}
             <section id="projects">

@@ -27,7 +27,7 @@ const pageTransition = {
 const projects = [
   {
     title: 'Tabletopia',
-    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n 2. Redis Sentinel 도입으로 SPOF를 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
+    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n\n2. Hibernate: 객체 지향 프로그래밍과 관계형 데이터베이스 간의 매핑을 자동화하여 생산성을 높이고 SQL 작성 부담을 줄이기 위해 사용했습니다.\n\n 3. Redis: 인메모리 캐시로 자주 조회되는 데이터의 응답 속도를 개선하고 데이터베이스 부하를 분산시키기 위해 사용했습니다. \n\n 4. Redis Sentinel 도입으로 SPOF를 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
     period: '2025.09.08 ~ 2025.10.20 (6주)',
     team: '5명',
     detailedDescription: [
@@ -65,11 +65,11 @@ const projects = [
       },
     ],
     imageUrl: `${import.meta.env.BASE_URL}TableTopia.png`,
-    githubUrl: 'https://github.com/zero5ive/Tabletopia',
+    githubUrl: 'https://github.com/sh-Dang/Tabletopia',
   },
   {
     title: 'Peach-Store',
-    description: 'Spring framework를 사용하여 만든 쇼핑몰 웹사이트입니다.',
+    description: '1. Spring MVC 기반의 전자상거래 플랫폼입니다. \n\n2. MyBatis: SQL을 직접 작성하여 복잡한 쿼리를 세밀하게 제어하고, 동적 쿼리 생성으로 유연한 데이터 처리를 구현하기 위해 사용했습니다. \n\n3. MySQL: 트랜잭션과 데이터 정합성이 중요한 주문, 회원, 제품 정보를 안전하게 저장하기 위해 사용했습니다. \n\n4. Soft Delete 패턴을 적용하여 데이터 무결성을 유지하고, 주문 스냅샷 시스템으로 주문 시점의 제품 정보를 보존했습니다.',
     period: '2025.07.10 ~ 2025.08.05 (4주)',
     team: '5명',
     detailedDescription: [
@@ -109,12 +109,10 @@ const projects = [
     imageUrl: `${import.meta.env.BASE_URL}peachstore.png`,
     githubUrl: 'https://github.com/zero5ive/Peach-Store',
 
-
-
   },
   {
     title: 'Shinlogis-WMS',
-    description: 'Java의 swing을 사용하여 만든 창고관리 시스템입니다.',
+    description: '1. Java Swing 기반의 창고관리 시스템입니다. \n\n2. Java Swing API 문서를 직접 읽고 활용하며 공식 문서 학습 능력을 기른 첫 프로젝트입니다.\n\n3. JDBC: 데이터베이스와 직접 연결하여 SQL을 실행하고, 트랜잭션을 명시적으로 제어하며 출고·재고 처리의 정합성을 보장하기 위해 사용했습니다. \n\n4. MVC 패턴을 적용하여 UI, 비즈니스 로직, 데이터 처리를 분리했으며, Soft Delete 패턴으로 데이터 이력 관리와 복구 가능성을 확보했습니다.',
     period: '2025.06.02 ~ 2025.06.29 (4주)',
     team: '5명',
     detailedDescription: [
@@ -185,12 +183,12 @@ const Projects = () => {
               <h4>{project.title}</h4>
               <p>{project.description}</p>
               <div className="project-links">
-                <button onClick={() => openModal(project)} className="toggle-button">
-                  자세히 보기
-                </button>
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-button">
                   GitHub Repository
                 </a>
+                <button onClick={() => openModal(project)} className="toggle-button">
+                  자세히 보기
+                </button>
               </div>
             </div>
           </div>

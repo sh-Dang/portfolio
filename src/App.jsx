@@ -21,13 +21,13 @@ function App() {
             <section id="about">
               <About />
             </section>
-            {/* 활동 */}
-            <section id="experiences">
-              <Experiences/>
-            </section>
             {/* 프로젝트 */}
             <section id="projects">
               <Projects />
+            </section>
+            {/* 활동 */}
+            <section id="experiences">
+              <Experiences/>
             </section>
             {/* 기술스택 */}
             <section id="skills">

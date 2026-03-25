@@ -48,8 +48,8 @@ const skillCategories = [
     title: 'Databases/ORM',
     skills: [
       { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
-      { logoUrl: jpaLogo, proficiency: 50 },
-      { logoUrl: redisLogo, proficiency: 50 }
+      { logoUrl: redisLogo, proficiency: 50 },
+      { logoUrl: jpaLogo, proficiency: 50 }
     ],
   },
   {

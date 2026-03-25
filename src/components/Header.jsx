@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <h1>SeHyung's Portfolio</h1>
+      <h1>이세형 포트폴리오</h1>
     </header>
   );
 };

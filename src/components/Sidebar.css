@@ -12,7 +12,8 @@
 }
 
 .sidebar-nav {
-  background-color: #5078be; /* 더 밝은 네이비/슬레이트 */
+  /* background-color: #5078be; 더 밝은 네이비/슬레이트 */
+  border: solid 1px #5078be;
   border-radius: 20px;
   margin-left: 20px;
   padding: 10px;
@@ -25,12 +26,12 @@
 .sidebar-nav a {
   padding: 10px 20px; /* 더 많은 수평 패딩 */
   text-decoration: none;
-  color: #8892b0; /* 음소거된 텍스트 색상 */
+  color:#5078be; /* 음소거된 텍스트 색상 */
   cursor: pointer;
   text-align: center;
-  border-radius: 15px; /* 링크의 둥근 모서리 */
   transition: color 0.2s; /* 배경 대신 색상 전환 */
   font-weight: 500;
+  border-bottom: 1px solid #5078be;
 }
 
 .sidebar-nav a:hover {

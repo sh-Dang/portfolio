@@ -43,6 +43,7 @@ const Experiences=()=>{
                       <li>Git을 통한 버전 관리 및 협업 개발 프로세스 경험</li>
                       <li>MVC 패턴을 적용한 유지보수 가능한 코드 작성</li>
                       <li>팀 프로젝트를 통한 요구사항 분석, API 명세서 작성, 배포 경험</li>
+                      <li>Docker도입을 통한 실행환경 안정화 경험</li>
                     </ul>
                   </div>
                 </div>

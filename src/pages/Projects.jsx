@@ -27,7 +27,7 @@ const pageTransition = {
 const projects = [
   {
     title: 'Tabletopia',
-    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n\n2. Hibernate: 객체 지향 프로그래밍과 관계형 데이터베이스 간의 매핑을 자동화하여 생산성을 높이고 SQL 작성 부담을 줄이기 위해 사용했습니다.\n\n 3. Redis: 인메모리 캐시로 자주 조회되는 데이터의 응답 속도를 개선하고 데이터베이스 부하를 분산시키기 위해 사용했습니다. \n\n 4. Redis Sentinel 도입으로 SPOF를 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
+    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n\n2. Hibernate: 객체 지향 프로그래밍과 관계형 데이터베이스 간의 매핑을 자동화하여 생산성을 높이고 SQL 작성 부담을 줄이기 위해 사용했습니다.\n\n 3. Redis: RefreshToken 검증 레이어를 DB에서 Redis로 변경하여 평균 응답시간을 697ms → 324ms로 53.5% 개선하였습니다. \n\n 4. Redis도입으로 발생한 SPOF를 Sentinel 도입으로 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
     period: '2025.09.08 ~ 2025.10.20 (6주)',
     team: '5명',
     detailedDescription: [

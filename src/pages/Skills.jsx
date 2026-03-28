@@ -32,31 +32,31 @@ const skillCategories = [
   {
     title: 'Languages',
     skills: [
-      { logoUrl: javaLogo, proficiency: 70 }, //Java
-      { logoUrl: htmlLogo, proficiency: 80 }, //HTML
-      { logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', proficiency: 75 }, //javaScript
+      { name: 'Java', logoUrl: javaLogo, proficiency: 70 }, //Java
+      { name: 'HTML', logoUrl: htmlLogo, proficiency: 80 }, //HTML
+      { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', proficiency: 75 }, //javaScript
     ],
   },
   {
     title: 'Frameworks & Libraries',
     skills: [
-      { logoUrl: springLogo, proficiency: 65 }, //Spring Boot
+      { name: 'Spring Boot', logoUrl: springLogo, proficiency: 65 }, //Spring Boot
       { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', proficiency: 60 }, //React
     ],
   },
   {
     title: 'Databases/ORM',
     skills: [
-      { logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
-      { logoUrl: redisLogo, proficiency: 50 },
-      { logoUrl: jpaLogo, proficiency: 50 }
+      { name: 'MySQL', logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
+      { name: 'Redis', logoUrl: redisLogo, proficiency: 50 },
+      { name: 'Hibernate', logoUrl: jpaLogo, proficiency: 50 }
     ],
   },
   {
     title: 'Tools & Others',
     skills: [
-      { logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg', proficiency: 80 },
-      { logoUrl: 'https://static.cdnlogo.com/logos/d/17/docker.svg', proficiency: 50 },
+      { name: 'Github', logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg', proficiency: 80 },
+      { name: 'Docker', logoUrl: 'https://static.cdnlogo.com/logos/d/17/docker.svg', proficiency: 50 },
     ],
   },
 ];

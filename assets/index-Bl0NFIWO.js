@@ -14,7 +14,8 @@ Error generating stack: `+a.message+`
 
  3. Redis: RefreshToken 검증 레이어를 DB에서 Redis로 변경하여 평균 응답시간을 697ms → 324ms로 53.5% 개선하였습니다. 
 
- 4. Redis도입으로 발생한 SPOF를 Sentinel 도입으로 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.`,period:"2025.09.08 ~ 2025.10.20 (6주)",team:"5명",detailedDescription:[{title:"개요",content:"실시간으로 레스토랑 테이블 예약 및 웨이팅을 관리하는 종합 플랫폼입니다. 고객은 레스토랑의 방문 시간과 원하는 테이블을 즉시 예약하거나 웨이팅을 등록할 수 있으며, AI 챗봇을 통해 개인 취향에 맞는 레스토랑을 추천받을 수 있습니다. 레스토랑은 직관적인 관리자 대시보드를 통해 테이블 예약 및 웨이팅 현황을 실시간으로 확인하며 매장을 효율적으로 관리할 수 있습니다."},{title:"역할",content:"풀스택 개발자로서 JWT 인증/인가, Redis를 활용한 캐싱 및 세션 관리를 담당했습니다. 또한 TossPayments API를 연동하여 예약금을 결제하는 기능을 구현했습니다."},{title:"Skills",content:`- Backend : Java, Spring Boot, Spring Security, JPA/Hibernate
+ 4. Redis도입으로 발생한 SPOF를 Sentinel 도입으로 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.`,period:"2025.09.08 ~ 2025.10.20 (6주)",team:"5명",detailedDescription:[{title:"개요",content:`실시간으로 레스토랑 테이블 예약 및 웨이팅을 관리하는 플랫폼입니다.
+고객은 원하는 레스토랑의 방문 시간과 테이블을 즉시 예약하거나 웨이팅 등록을 할 수 있으며, AI 챗봇을 통해 개인 취향에 맞는 레스토랑을 추천받을 수 있습니다. 레스토랑은 관리자 대시보드를 통해 테이블 예약 및 웨이팅 현황을 실시간으로 확인하며 매장을 효율적으로 관리할 수 있습니다.`},{title:"역할",content:"풀스택 개발자로서 UI 설계, JWT 기반 인증/인가, Redis를 활용한 세션 관리 기능을 담당했습니다. 또한 TossPayments API를 연동해 예약금 결제 기능을 구현했습니다."},{title:"Skills",content:`- Backend : Java, Spring Boot, Spring Security, JPA/Hibernate
 - Frontend : React, JavaScript, HTML5, CSS3, Bootstrap
 - Database: MySQL, Redis
 - API Integration : OpenAI API, Google Maps API, Toss Payments
@@ -40,26 +41,26 @@ Error generating stack: `+a.message+`
 
 ### TO-BE
 - Toss Payments API 연동하여 예약 보증금 결제 기능 구현
-- 결제 승인 후 예약 확정, 노쇼 발생 시 보증금 차감, 정상 방문 시 환불 처리
+- 결제 승인 후 예약 확정, 노쇼 발생 시 보증금 차감, 정상 방문 시 결제금액에서 차감
 - 결제 실패 시 트랜잭션 롤백으로 데이터 정합성 보장`},{title:"개선할 점",content:`- 검색 기능 고도화: Elasticsearch를 활용하여 레스토랑 검색 정확도 및 속도 향상
 - 모니터링 및 로깅 강화: 운영 환경에서 발생할 수 있는 문제를 실시간으로 감지하고 대응 가능하도록 시스템 개선`},{title:"회고",content:`이번 프로젝트를 통해 실시간 데이터 처리와 동시성 제어의 중요성을 깊이 체감할 수 있었습니다.
 
 교육 목적의 프로젝트였던 만큼, 팀원들과 각자의 구현 파트와 기술적 이해를 공유하며 서로의 학습 내용을 설명하고 토론하는 과정이 매우 의미 있었습니다.
 
-Redis를 활용하여 실시간성과 성능을 동시에 확보하는 방법을 학습했고, TossPayments를 필두로 다양한 외부 API를 연동하며 실무에서 필요한 API 통합 역량도 크게 향상되었습니다.
+Redis를 활용하여 실시간성과 성능을 동시에 확보하는 방법을 학습했고, TossPayments를 필두로 다양한 외부 API를 연동하며 실무에서 필요한 API 통합 역량도 향상되었습니다.
 
 이번 경험을 바탕으로, 다음 프로젝트에서는 운영 환경에서의 안정성과 확장성을 고려한 설계와 모니터링에도 더욱 신경 쓰고 싶습니다.`}],imageUrl:"/TableTopia.png",githubUrl:"https://github.com/sh-Dang/Tabletopia"},{title:"Peach-Store",description:`1. Spring MVC 기반의 전자상거래 플랫폼입니다. 
 
-2. MyBatis: SQL을 직접 작성하여 복잡한 쿼리를 세밀하게 제어하고, 동적 쿼리 생성으로 유연한 데이터 처리를 구현하기 위해 사용했습니다. 
+2. MyBatis: SQL을 직접 작성하여 복잡한 쿼리를 제어하고, 동적 쿼리 생성으로 유연한 데이터 처리를 구현하기 위해 사용했습니다. 
 
 3. MySQL: 트랜잭션과 데이터 정합성이 중요한 주문, 회원, 제품 정보를 안전하게 저장하기 위해 사용했습니다. 
 
-4. Soft Delete 패턴을 적용하여 데이터 무결성을 유지하고, 주문 스냅샷 시스템으로 주문 시점의 제품 정보를 보존했습니다.`,period:"2025.07.10 ~ 2025.08.05 (4주)",team:"5명",detailedDescription:[{title:"개요",content:"Apple 스타일의 전자기기와 악세서리를 판매하는 전자상거래 플랫폼입니다. pPhone, pPad, pMac 등의 제품을 판매하며, 제품 커스터마이징, 회원 등급별 할인 정책, SNS 로그인, 결제 시스템 등 실제 쇼핑몰의 핵심 기능을 구현했습니다. 관리자와 고객 간의 양방향 소통(문의/답변, 리뷰)을 지원하며, 주문 시점의 제품 정보를 스냅샷으로 보존하는 기능을 포함합니다."},{title:"역할",content:"풀스택 개발자로서 전반적인 frontend디자인과 회원가입/로그인 기능을 담담하여 개발했습니다."},{title:"Skills",content:`- Backend : Java, Spring MVC, MyBatis, Maven
+4. Soft Delete 패턴을 적용하여 데이터 무결성을 유지하고, 주문 스냅샷 시스템으로 주문 시점의 제품 정보를 보존했습니다.`,period:"2025.07.10 ~ 2025.08.05 (4주)",team:"5명",detailedDescription:[{title:"개요",content:"Apple 스타일의 전자기기와 악세서리를 판매하는 전자상거래 플랫폼입니다. pPhone, pPad, pMac 등의 제품을 판매하며, 제품 커스터마이징, 회원 등급별 할인 정책, SNS 로그인, 결제 시스템 등 실제 쇼핑몰의 핵심 기능을 구현했습니다. 관리자와 고객 간의 양방향 소통(문의/답변, 리뷰)을 지원하며, 주문 시점의 제품 정보를 스냅샷으로 보존하는 기능을 포함합니다."},{title:"역할",content:"풀스택 개발자로서 전반적인 frontend디자인과 회원가입/로그인 기능을 담담하여 개발했습니다."},{title:"Skills",content:`- Backend : Java, Spring MVC, MyBatis
 - Frontend : JSP, Bootstrap, jQuery
 - Database : MySQL
 - API Integration : 카카오/네이버 소셜 로그인, 다음 우편번호 API, 토스 페이먼츠
 - Infra : Apache Tomcat
-- Tools : Gradle, Lombok, Git, GitHub, Jira`},{title:"회원가입 / 로그인",content:`### AS-IS
+- Tools : Lombok, Git, GitHub, Jira`},{title:"회원가입 / 로그인",content:`### AS-IS
 - 회원을 식별할 수 있는 로그인 기능의 부재
 - 회원의 계정 정보, 이메일 인증, 비밀번호 관리 기능이 없음
 - 비회원 상태에서는 구매 내역, 장바구니, 맞춤 추천 등의 개인화 서비스 이용 불가
@@ -100,26 +101,25 @@ Redis를 활용하여 실시간성과 성능을 동시에 확보하는 방법을
 
 4. MVC 패턴을 적용하여 UI, 비즈니스 로직, 데이터 처리를 분리했으며, Soft Delete 패턴으로 데이터 이력 관리와 복구 가능성을 확보했습니다.`,period:"2025.06.02 ~ 2025.06.29 (4주)",team:"5명",detailedDescription:[{title:"개요",content:`창고 내 입고·출고·재고·보관을 종합적으로 관리하는 경량형 창고관리(WMS) 시스템입니다.
 
-실제 물류 프로세스(공급사 → 창고 → 지점)의 흐름을 기반으로, 출고 처리와 재고 차감, 파손 관리 등 핵심 업무를 수행할 수 있도록 설계되었습니다.`},{title:"역할",content:`Java Swing 기반 클라이언트에서 다음 출고(Outbound) 기능과 주문 조회 기능을 개발했습니다.
+실제 물류 프로세스(공급사 → 창고 → 지점)의 흐름을 기반으로, 출고 처리와 재고 차감, 파손 관리 등 핵심 업무를 수행할 수 있도록 설계되었습니다.`},{title:"역할",content:`Java Swing 기반 클라이언트에서 출고(Outbound) 기능과 주문 조회 기능을 개발했습니다.
 
-- 출고 예정 목록 조회, 주문 상세 조회 화면 구현
-- 출고 확정 시 재고 차감 및 입출고 기록 저장 로직 개발
-- 주문 데이터 필터 검색 기능 구현
-- JDBC 기반 DAO 구성 및 SQL 작성`},{title:"Skills",content:`Backend : Java, JDBC, MVC Pattern
+1. 출고 예정 목록 조회, 주문 상세 조회 화면 구현
+2. 출고 확정 시 재고 차감 및 입출고 기록 저장 로직 개발
+3. 주문 데이터 필터 검색 기능 구현
+4. JDBC 기반 DAO 구성 및 SQL 작성`},{title:"Skills",content:`Backend : Java, JDBC 
 
 Frontend(UI) : Java Swing
 
 Database : MySQL`},{title:"출고(Outbound) 기능",content:`### AS-IS
 - 기존 출고 흐름이 정리되어 있지 않아 작업자가 물류 프로세스를 단계별로 확인하기 어려웠음
 - 재고 차감, 출고 기록 저장, 파손 처리 등 각 기능이 분리되어 있어 연계 작업 중 데이터 불일치 가능성이 존재
-- GUI가 단순 조회 수준에 그쳐 실작업 프로세스를 반영하기 어려움
 
 ### TO-BE
 - 출고 조회 → 상세 확인 → 출고 확정까지 이어지는 단일 프로세스 흐름 완성
 - 출고 확정 시
-    - 재고 자동 차감
-    - 출고 기록 저장
-    - 출고 상세 테이블 기록까지 일괄 처리
+- 재고 자동 차감
+- 출고 기록 저장
+- 출고 상세 테이블 기록까지 일괄 처리
 - 파손/부분 출고 등 예외 처리 로직 반영
 - Swing UI와 DAO 로직 연동으로 실제 현장의 물류 처리 흐름을 반영`},{title:"주문 조회(Order Inquiry)",content:`### AS-IS
 - 주문을 창고/지점별로 필터링하거나 상세 데이터를 확인하는 기능이 부재
@@ -128,7 +128,7 @@ Database : MySQL`},{title:"출고(Outbound) 기능",content:`### AS-IS
 ### TO-BE
 - 창고·지점 기준 주문 검색 기능 추가
 - 주문 상세 팝업 구현으로 제품별 수량/상세 정보 확인 가능
-- UI에서 검색 조건 선택 → DB 조회 → 테이블 렌더링 구조로 개선`},{title:"Soft Delete 적용(미니 개선 사항)",content:`### AS-IS
+- UI에서 검색 조건 선택 → DB 조회 → 테이블 렌더링 구조로 개선`},{title:"Soft Delete 적용",content:`### AS-IS
 - 출고/주문 관련 기록을 삭제하면 데이터 추적이 불가능
 - 테스트 과정에서 실수로 삭제하면 데이터 무결성 붕괴 가능
 
@@ -137,12 +137,8 @@ Database : MySQL`},{title:"출고(Outbound) 기능",content:`### AS-IS
 - 실제 삭제 대신 상태값 변경 방식으로 처리
 - 로그·이력 관리가 쉬워지고, 테스트 시 복구도 가능`},{title:"개선할 점",content:`- 출고 프로세스에 대한 로그 시스템 추가
 - 입고/재고 모듈과의 연동 강화
-- 실제 트랜잭션 기반 처리로 확장(SPRING 전환 시도 가능)`},{title:"회고",content:`Java Swing 기반으로 실제 업무 도메인을 반영해보며 물류 시스템의 구조를 깊이 이해할 수 있었습니다.
-
-특히 출고 확정 시 재고 차감·기록 저장·예외 처리까지 하나의 흐름으로 연결하는 과정에서 데이터 정합성의 중요성을 크게 느꼈습니다.
-
-또 팀원들과 역할을 분배해 협업하면서 UI 흐름 설계, 프로젝트의 방향성 통일등의 협업 경험을 할 수 있었고, 이후 Spring 기반 프로젝트에서도 많은 도움이 되었습니다.
-
-마지막으로 Java Swing GUI를 통한 개발로 개발 초심자였던 저에게 API활용 방법 및 API문서 학습에 큰 도움이 되어 개발자로서 기초를 닦는데 도움이 된 프로젝트였습니다.`}],imageUrl:"/shinlogis.png",githubUrl:"https://github.com/zero5ive/Shinlogis-WMS"}],m2=()=>{const[i,l]=nt.useState(null),o=c=>{l(c)},r=()=>{l(null)};return R.jsxs(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:f2,transition:h2,className:"section",children:[R.jsx("h2",{children:"Projects"}),R.jsx("div",{className:"projects-grid",children:d2.map((c,d)=>R.jsxs("div",{className:"project-card",children:[R.jsx("img",{src:c.imageUrl,alt:c.title,className:"project-image"}),R.jsxs("div",{className:"project-info",children:[R.jsx("h4",{children:c.title}),R.jsx("p",{children:c.description}),R.jsxs("div",{className:"project-links",children:[R.jsx("a",{href:c.githubUrl,target:"_blank",rel:"noopener noreferrer",className:"github-button",children:"GitHub Repository"}),R.jsx("button",{onClick:()=>o(c),className:"toggle-button",children:"자세히 보기"})]})]})]},d))}),R.jsx(c2,{project:i,onClose:r})]})},y2="/assets/javalogo-CldTlHYw.png",p2="/assets/htmllogo-BgbgIA4g.png",g2="/assets/springlogo-g9MLhs7V.png",v2="/assets/redislogo-CHbCx227.png",S2="/assets/jpalogo-CRj-eyMB.png",T2={initial:{opacity:0,y:"-100vh"},in:{opacity:1,y:0},out:{opacity:0,y:"100vh"}},b2={type:"tween",ease:"easeInOut",duration:.5},A2=[{title:"Languages",skills:[{name:"Java",logoUrl:y2,proficiency:70},{name:"HTML",logoUrl:p2,proficiency:80},{name:"JavaScript",logoUrl:"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",proficiency:75}]},{title:"Frameworks & Libraries",skills:[{name:"Spring Boot",logoUrl:g2,proficiency:65},{name:"React",logoUrl:"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",proficiency:60}]},{title:"Databases/ORM",skills:[{name:"MySQL",logoUrl:"https://static.cdnlogo.com/logos/m/10/mysql.svg",proficiency:70},{name:"Redis",logoUrl:v2,proficiency:50},{name:"Hibernate",logoUrl:S2,proficiency:50}]},{title:"Tools & Others",skills:[{name:"Github",logoUrl:"https://static.cdnlogo.com/logos/g/46/git.svg",proficiency:80},{name:"Docker",logoUrl:"https://static.cdnlogo.com/logos/d/17/docker.svg",proficiency:50}]}],E2=()=>R.jsxs(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:T2,transition:b2,className:"section",children:[R.jsx("h2",{children:"Stacks"}),R.jsx("div",{className:"category-grid",children:A2.map((i,l)=>R.jsxs("div",{className:"skill-category",children:[R.jsx("h3",{children:i.title}),R.jsx("div",{className:"skills-grid",children:i.skills.map((o,r)=>R.jsx("div",{className:"skill-item",children:R.jsxs("div",{className:"skill-card",children:[R.jsx("img",{src:o.logoUrl,alt:`${o.name} logo`,className:"skill-logo"}),R.jsx("span",{children:o.name})]})},r))})]},l))})]}),x2=()=>R.jsx("footer",{className:"footer",children:R.jsxs("p",{children:["© ",new Date().getFullYear()," SeHyung's Portfolio. All Rights Reserved."]})}),M2={initial:{opacity:0,x:"-100vw"},in:{opacity:1,x:0},out:{opacity:0,x:"100vw"}},D2={type:"tween",ease:"anticipate",duration:.5},C2=[{name:`컴퓨터
+- 실제 트랜잭션 기반 처리로 확장(SPRING 전환 시도 가능)`},{title:"회고",content:`Java를 이용한 첫 팀 프로젝트로 팀원들과 역할을 분배해 협업하면서 UI 흐름 설계, 프로젝트의 방향성 통일등의 협업 경험을 할 수 있었고, 업무 도메인에 대한 이해와 웹 애플리케이션의 구조에 대해 이해할 수 있었습니다.
+나아가 입고, 저장, 출고, 재고차감의 일련의 과정들을 하나의 흐름으로 연결하면서 데이터 정합성의 중요성을 느낄 수 있었습니다.
+마지막으로 Java Swing GUI를 통한 개발로 비전공자였던 저에게 API문서 학습 및 API활용연습을 익혀 개발자로서 기초를 닦는데 도움이 된 프로젝트였습니다.`}],imageUrl:"/shinlogis.png",githubUrl:"https://github.com/zero5ive/Shinlogis-WMS"}],m2=()=>{const[i,l]=nt.useState(null),o=c=>{l(c)},r=()=>{l(null)};return R.jsxs(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:f2,transition:h2,className:"section",children:[R.jsx("h2",{children:"Projects"}),R.jsx("div",{className:"projects-grid",children:d2.map((c,d)=>R.jsxs("div",{className:"project-card",children:[R.jsx("img",{src:c.imageUrl,alt:c.title,className:"project-image"}),R.jsxs("div",{className:"project-info",children:[R.jsx("h4",{children:c.title}),R.jsx("p",{children:c.description}),R.jsxs("div",{className:"project-links",children:[R.jsx("a",{href:c.githubUrl,target:"_blank",rel:"noopener noreferrer",className:"github-button",children:"GitHub Repository"}),R.jsx("button",{onClick:()=>o(c),className:"toggle-button",children:"자세히 보기"})]})]})]},d))}),R.jsx(c2,{project:i,onClose:r})]})},y2="/assets/javalogo-CldTlHYw.png",p2="/assets/htmllogo-BgbgIA4g.png",g2="/assets/springlogo-g9MLhs7V.png",v2="/assets/redislogo-CHbCx227.png",S2="/assets/jpalogo-CRj-eyMB.png",T2={initial:{opacity:0,y:"-100vh"},in:{opacity:1,y:0},out:{opacity:0,y:"100vh"}},b2={type:"tween",ease:"easeInOut",duration:.5},A2=[{title:"Languages",skills:[{name:"Java",logoUrl:y2,proficiency:70},{name:"HTML",logoUrl:p2,proficiency:80},{name:"JavaScript",logoUrl:"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",proficiency:75}]},{title:"Frameworks & Libraries",skills:[{name:"Spring Boot",logoUrl:g2,proficiency:65},{name:"React",logoUrl:"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",proficiency:60}]},{title:"Databases/ORM",skills:[{name:"MySQL",logoUrl:"https://static.cdnlogo.com/logos/m/10/mysql.svg",proficiency:70},{name:"Redis",logoUrl:v2,proficiency:50},{name:"Hibernate",logoUrl:S2,proficiency:50}]},{title:"Tools & Others",skills:[{name:"Github",logoUrl:"https://static.cdnlogo.com/logos/g/46/git.svg",proficiency:80},{name:"Docker",logoUrl:"https://static.cdnlogo.com/logos/d/17/docker.svg",proficiency:50}]}],E2=()=>R.jsxs(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:T2,transition:b2,className:"section",children:[R.jsx("h2",{children:"Stacks"}),R.jsx("div",{className:"category-grid",children:A2.map((i,l)=>R.jsxs("div",{className:"skill-category",children:[R.jsx("h3",{children:i.title}),R.jsx("div",{className:"skills-grid",children:i.skills.map((o,r)=>R.jsx("div",{className:"skill-item",children:R.jsxs("div",{className:"skill-card",children:[R.jsx("img",{src:o.logoUrl,alt:`${o.name} logo`,className:"skill-logo"}),R.jsx("span",{children:o.name})]})},r))})]},l))})]}),x2=()=>R.jsx("footer",{className:"footer",children:R.jsxs("p",{children:["© ",new Date().getFullYear()," SeHyung's Portfolio. All Rights Reserved."]})}),M2={initial:{opacity:0,x:"-100vw"},in:{opacity:1,x:0},out:{opacity:0,x:"100vw"}},D2={type:"tween",ease:"anticipate",duration:.5},C2=[{name:`컴퓨터
 활용능력 2급`,date:"2015.05"},{name:`SQLD
 (SQL 개발자)`,date:"2025.12"}],O2=()=>R.jsx(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:M2,transition:D2,className:"section",children:R.jsxs("div",{className:"section-content",children:[R.jsx("h2",{children:"Certificates"}),R.jsx("div",{className:"certificates-grid",children:C2.map((i,l)=>R.jsx("div",{className:"certificate-item",children:R.jsx("div",{className:"certificate-card",children:R.jsxs("div",{className:"certificate-info",children:[R.jsx("h3",{style:{whiteSpace:"pre-line"},children:i.name}),R.jsx("p",{children:i.date})]})})},l))})]})}),z2={initial:{opacity:0,y:"-100vh"},in:{opacity:1,y:0},out:{opacity:0,y:"100vh"}},R2={type:"tween",ease:"easeInOut",duration:.5},V2=()=>R.jsx(Ml.div,{initial:"initial",animate:"in",exit:"out",variants:z2,transition:R2,className:"section",children:R.jsxs("div",{className:"section-content",children:[R.jsx("h2",{children:"Experiences"}),R.jsxs("div",{className:"experience-item",children:[R.jsx("h3",{children:"Java 백엔드 개발자 양성과정 수료 | 2025.04 - 2025.10 (6개월)"}),R.jsxs("ul",{children:[R.jsx("li",{children:"Java, Spring Boot 기반 웹 애플리케이션 개발 및 RESTful API 설계/구현"}),R.jsx("li",{children:"MySQL을 활용한 데이터베이스 설계, 쿼리 최적화 및 트랜잭션 관리"}),R.jsx("li",{children:"Git을 통한 버전 관리 및 협업 개발 프로세스 경험"}),R.jsx("li",{children:"MVC 패턴을 적용한 유지보수 가능한 코드 작성"}),R.jsx("li",{children:"팀 프로젝트를 통한 요구사항 분석, API 명세서 작성, 배포 경험"}),R.jsx("li",{children:"Docker도입을 통한 실행환경 안정화 경험"})]})]})]})});function _2(){return R.jsxs("div",{className:"app",children:[R.jsx(O1,{}),R.jsxs("div",{className:"app-layout",children:[R.jsx(C1,{}),R.jsx("div",{className:"content",children:R.jsxs("main",{className:"main",children:[R.jsx("section",{id:"about",children:R.jsx(r2,{})}),R.jsx("section",{id:"projects",children:R.jsx(m2,{})}),R.jsx("section",{id:"experiences",children:R.jsx(V2,{})}),R.jsx("section",{id:"skills",children:R.jsx(E2,{})}),R.jsx("section",{id:"certificated",children:R.jsx(O2,{})})]})})]}),R.jsx(x2,{})]})}const j2=D1.createRoot(document.getElementById("root"));j2.render(R.jsx(v1.StrictMode,{children:R.jsx(_2,{})}));

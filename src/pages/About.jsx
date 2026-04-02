@@ -51,12 +51,12 @@ const About = () => {
             
       <div className="social-links">
         <a href="https://github.com/sh-Dang" target="_blank" rel="noopener noreferrer" className="social-link">
-          <img src={`${import.meta.env.BASE_URL}gitlogo.png`} alt="GitHub" className="social-icon" />
+          <img src={`https://github.com/fluidicon.png`} alt="GitHub" className="social-icon" />
           <span>GitHub</span>
         </a>
-        <a href="https://velog.io/@lee_dang/posts" target="_blank" rel="noopener noreferrer" className="social-link">
-          <img src={`${import.meta.env.BASE_URL}velogimage.png`} alt="Velog" className="social-icon" />
-          <span>Velog</span>
+        <a href="https://sehyung.tistory.com" target="_blank" rel="noopener noreferrer" className="social-link">
+          <img src={`${import.meta.env.BASE_URL}tstoryicon.png`} alt="Velog" className="social-icon" />
+          <span>블로그</span>
         </a>
       </div>
 

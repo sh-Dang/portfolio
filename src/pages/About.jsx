@@ -48,7 +48,7 @@ const About = () => {
           <p>
             E-mail : henrys200632@gmail.com<br></br>
             Phone : 010-9009-0592
-            
+            </p>
       <div className="social-links">
         <a href="https://github.com/sh-Dang" target="_blank" rel="noopener noreferrer" className="social-link">
           <img src={`https://github.com/fluidicon.png`} alt="GitHub" className="social-icon" />
@@ -59,8 +59,6 @@ const About = () => {
           <span>블로그</span>
         </a>
       </div>
-
-          </p>
         </div>
       </div>
     </motion.div>

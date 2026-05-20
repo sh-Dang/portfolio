@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from '../components/Modal';
 import './Projects.css';
+import { details } from 'framer-motion/client';
 
 const pageVariants = {
   initial: {
@@ -26,8 +27,93 @@ const pageTransition = {
 
 const projects = [
   {
+    title: 'MyBoard',
+    description:
+      '1. React, Spring Boot 기반의 게시판 서비스입니다.\n\n' +
+      '2. Spring Security와 JWT를 활용하여 Stateless 인증/인가 시스템을 구축했습니다.\n\n' +
+      '3. GitHub Actions, Docker, OCI를 활용하여 CI/CD 자동 배포 환경을 구축했으며, GitHub Push만으로 자동 빌드 및 배포가 가능하도록 구성했습니다.\n\n' +
+      '4. Bucket4j 기반 Rate Limit를 적용하여 비정상적인 API 요청을 제한하고 서버 자원을 보호할 수 있도록 구현했습니다.',
+    period: '2026.03.04 ~ 진행 중',
+    team: '1인 개발',
+    detailedDescription: [
+      {
+        title: '개요',
+        content:
+          'React와 Spring Boot 기반으로 구현한 게시판 서비스입니다.\n\n' +
+          '단순 CRUD 구현에 그치지 않고, JWT 기반 인증/인가, Rate Limit, Docker, GitHub Actions, OCI 배포를 적용하여 실제 운영 환경을 고려한 백엔드 아키텍처 구축에 중점을 두었습니다.\n\n' +
+          'CI/CD 파이프라인을 구성하여 GitHub Push만으로 자동 빌드 및 배포가 가능하도록 구현했으며, Spring Security 기반의 권한 처리와 예외 응답 표준화 등을 통해 안정적인 서비스 구조를 설계했습니다.',
+      },
+      {
+        title: 'Skills',
+        content:
+          '- Backend : Java, Spring Boot, Spring Security, JPA/Hibernate, JWT\n' +
+          '- Frontend : React, JavaScript, HTML5, CSS3\n' +
+          '- Database : MySQL\n' +
+          '- Infra & DevOps : Docker, GitHub Actions, Oracle Cloud Infrastructure(OCI)\n' +
+          '- Tools : Gradle, Git, GitHub, Lombok',
+      },
+      {
+        title: 'JWT 기반 인증/인가 시스템',
+        content:
+          '### AS-IS\n' +
+          '- 세션 기반 인증 방식은 서버 메모리 사용량 증가 및 확장성에 한계 존재\n' +
+          '- 서버 확장 시 세션 공유(Session Clustering) 문제 발생 가능\n\n' +
+          '### TO-BE\n' +
+          '- Spring Security와 JWT를 활용한 Stateless 인증 구조 적용\n' +
+          '- Custom Filter 및 Security Context 기반 인증 처리 구현',
+      },
+      {
+        title: 'CI/CD 자동 배포 구축',
+        content:
+          '### AS-IS\n' +
+          '- 코드 수정 후 수동 빌드 및 서버 배포 필요\n' +
+          '- 배포 과정에서 휴먼 에러 발생 가능\n' +
+          '- 운영 서버 반영 과정이 비효율적\n\n' +
+          '### TO-BE\n' +
+          '- GitHub Actions 기반 CI/CD 파이프라인 구축\n' +
+          '- GitHub Push 시 자동 테스트 및 빌드 수행\n' +
+          '- Docker Image 생성 후 Docker Hub에 Push\n' +
+          '- OCI 서버에서 최신 컨테이너 자동 배포\n' +
+          '- 배포 자동화를 통해 운영 효율성과 배포 안정성 향상',
+      },
+      {
+        title: 'Rate Limit 적용',
+        content:
+          '### 문제 상황\n' +
+          '- 외부 사용자 접근이 가능한 환경에서 과도한 API 요청 발생 가능\n' +
+          '- 인증 및 게시글 API에 대한 무차별 요청 위험 존재\n\n' +
+          '### 해결\n' +
+          '- Bucket4j 기반 Rate Limit 적용\n' +
+          '- IP 기준 요청 횟수 제한 구현\n' +
+          '- JwtAuthenticationFilter 이전에 필터를 배치하여 비정상 요청 선제 차단\n' +
+          '- 서버 자원 보호 및 API 안정성 향상',
+      },
+      {
+        title: '개선할 점',
+        content:
+          '- 테스트 코드 및 CI 단계 자동화 강화\n' +
+          '- Redis 캐싱 전략을 적용하여 RefreshToken 로직 추가 및 조회 성능 개선 \n' +
+          '- 이미지 업로드 기능을 도입하여 사용자 경험 및 게시글 표현력 향상 필요 ',
+      },
+      {
+        title: '회고',
+        content:
+          '이번 프로젝트를 통해 단순 기능 구현을 넘어, 실제 운영 환경을 고려한 백엔드 서비스 구조를 고민할 수 있었습니다.\n\n' +
+          'JWT 기반 인증/인가, Docker 기반 컨테이너 환경, GitHub Actions를 활용한 CI/CD 자동 배포까지 직접 구축하며 서비스 운영 흐름 전반을 경험했습니다.\n\n' +
+          '특히 배포 자동화 과정에서 환경 변수 관리, Docker 이미지 버전 관리, 서버 배포 흐름 등을 다루며 DevOps 영역에 대한 이해도를 높일 수 있었습니다.\n\n' +
+          '또한 Spring Security Filter Chain 구조와 인증 처리 흐름을 직접 구현하면서 보안 아키텍처에 대한 이해도 함께 향상시킬 수 있었습니다.',
+      },
+    ],
+    imageUrl: `${import.meta.env.BASE_URL}boardcicd.png`,
+    githubUrl: 'https://github.com/sh-Dang/boardcicd',
+  },
+  {
     title: 'Tabletopia',
-    description: '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n\n2. Hibernate: 객체 지향 프로그래밍과 관계형 데이터베이스 간의 매핑을 자동화하여 생산성을 높이고 SQL 작성 부담을 줄이기 위해 사용했습니다.\n\n 3. Redis: RefreshToken 검증 레이어를 DB에서 Redis로 변경하여 평균 응답시간을 697ms → 324ms로 53.5% 개선하였습니다. \n\n 4. Redis도입으로 발생한 SPOF를 Sentinel 도입으로 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
+    description:
+    '1. Spring Boot 기반의 실시간 레스토랑 예약 서비스입니다. \n\n' +
+    '2. Hibernate: 객체 지향 프로그래밍과 관계형 데이터베이스 간의 매핑을 자동화하여 생산성을 높이고 SQL 작성 부담을 줄이기 위해 사용했습니다.\n\n' +
+    '3. Redis: RefreshToken 검증 레이어를 DB에서 Redis로 변경하여 평균 응답시간을 697ms → 324ms로 53.5% 개선하였습니다. \n\n' +
+    '4. Redis도입으로 발생한 SPOF를 Sentinel 도입으로 제거했으며, Docker를 활용해 환경 변화에 유연하게 대응했습니다.',
     period: '2025.09.08 ~ 2025.10.20 (6주)',
     team: '5명',
     detailedDescription: [
@@ -69,7 +155,11 @@ const projects = [
   },
   {
     title: 'Peach-Store',
-    description: '1. Spring MVC 기반의 전자상거래 플랫폼입니다. \n\n2. MyBatis: SQL을 직접 작성하여 복잡한 쿼리를 제어하고, 동적 쿼리 생성으로 유연한 데이터 처리를 구현하기 위해 사용했습니다. \n\n3. MySQL: 트랜잭션과 데이터 정합성이 중요한 주문, 회원, 제품 정보를 안전하게 저장하기 위해 사용했습니다. \n\n4. Soft Delete 패턴을 적용하여 데이터 무결성을 유지하고, 주문 스냅샷 시스템으로 주문 시점의 제품 정보를 보존했습니다.',
+    description:
+    '1. Spring MVC 기반의 전자상거래 플랫폼입니다. \n\n' + 
+    '2. MyBatis: SQL을 직접 작성하여 복잡한 쿼리를 제어하고, 동적 쿼리 생성으로 유연한 데이터 처리를 구현하기 위해 사용했습니다. \n\n' +
+    '3. MySQL: 트랜잭션과 데이터 정합성이 중요한 주문, 회원, 제품 정보를 안전하게 저장하기 위해 사용했습니다. \n\n' + 
+    '4. Soft Delete 패턴을 적용하여 데이터 무결성을 유지하고, 주문 스냅샷 시스템으로 주문 시점의 제품 정보를 보존했습니다.',
     period: '2025.07.10 ~ 2025.08.05 (4주)',
     team: '5명',
     detailedDescription: [
@@ -110,48 +200,48 @@ const projects = [
     githubUrl: 'https://github.com/zero5ive/Peach-Store',
 
   },
-  {
-    title: 'Shinlogis-WMS',
-    description: '1. Java Swing 기반의 창고관리 시스템입니다. \n\n2. Java Swing API 문서를 직접 읽고 활용하며 공식 문서 학습 능력을 기른 첫 프로젝트입니다.\n\n3. JDBC: 데이터베이스와 직접 연결하여 SQL을 실행하고, 트랜잭션을 명시적으로 제어하며 출고·재고 처리의 정합성을 보장하기 위해 사용했습니다. \n\n4. MVC 패턴을 적용하여 UI, 비즈니스 로직, 데이터 처리를 분리했으며, Soft Delete 패턴으로 데이터 이력 관리와 복구 가능성을 확보했습니다.',
-    period: '2025.06.02 ~ 2025.06.29 (4주)',
-    team: '5명',
-    detailedDescription: [
-      {
-        title: '개요',
-        content: '창고 내 입고·출고·재고·보관을 종합적으로 관리하는 경량형 창고관리(WMS) 시스템입니다.\n\n실제 물류 프로세스(공급사 → 창고 → 지점)의 흐름을 기반으로, 출고 처리와 재고 차감, 파손 관리 등 핵심 업무를 수행할 수 있도록 설계되었습니다.',
-      },
-      {
-        title: '역할',
-        content: 'Java Swing 기반 클라이언트에서 출고(Outbound) 기능과 주문 조회 기능을 개발했습니다.\n\n1. 출고 예정 목록 조회, 주문 상세 조회 화면 구현\n2. 출고 확정 시 재고 차감 및 입출고 기록 저장 로직 개발\n3. 주문 데이터 필터 검색 기능 구현\n4. JDBC 기반 DAO 구성 및 SQL 작성',
-      },
-      {
-        title: 'Skills',
-        content: 'Backend : Java, JDBC \n\nFrontend(UI) : Java Swing\n\nDatabase : MySQL',
-      },
-      {
-        title: '출고(Outbound) 기능',
-        content: '### AS-IS\n- 기존 출고 흐름이 정리되어 있지 않아 작업자가 물류 프로세스를 단계별로 확인하기 어려웠음\n- 재고 차감, 출고 기록 저장, 파손 처리 등 각 기능이 분리되어 있어 연계 작업 중 데이터 불일치 가능성이 존재\n\n### TO-BE\n- 출고 조회 → 상세 확인 → 출고 확정까지 이어지는 단일 프로세스 흐름 완성\n- 출고 확정 시\n- 재고 자동 차감\n- 출고 기록 저장\n- 출고 상세 테이블 기록까지 일괄 처리\n- 파손/부분 출고 등 예외 처리 로직 반영\n- Swing UI와 DAO 로직 연동으로 실제 현장의 물류 처리 흐름을 반영',
-      },
-      {
-        title: '주문 조회(Order Inquiry)',
-        content: '### AS-IS\n- 주문을 창고/지점별로 필터링하거나 상세 데이터를 확인하는 기능이 부재\n- 주문번호로만 관리되어 작업 편의성이 떨어짐\n\n### TO-BE\n- 창고·지점 기준 주문 검색 기능 추가\n- 주문 상세 팝업 구현으로 제품별 수량/상세 정보 확인 가능\n- UI에서 검색 조건 선택 → DB 조회 → 테이블 렌더링 구조로 개선',
-      },
-      {
-        title: 'Soft Delete 적용',
-        content: '### AS-IS\n- 출고/주문 관련 기록을 삭제하면 데이터 추적이 불가능\n- 테스트 과정에서 실수로 삭제하면 데이터 무결성 붕괴 가능\n\n### TO-BE\n- 주요 테이블에 `is_active` 플래그 추가\n- 실제 삭제 대신 상태값 변경 방식으로 처리\n- 로그·이력 관리가 쉬워지고, 테스트 시 복구도 가능',
-      },
-      {
-        title: '개선할 점',
-        content: '- 출고 프로세스에 대한 로그 시스템 추가\n- 입고/재고 모듈과의 연동 강화\n- 실제 트랜잭션 기반 처리로 확장(SPRING 전환 시도 가능)',
-      },
-      {
-        title: '회고',
-        content: 'Java를 이용한 첫 팀 프로젝트로 팀원들과 역할을 분배해 협업하면서 UI 흐름 설계, 프로젝트의 방향성 통일등의 협업 경험을 할 수 있었고, 업무 도메인에 대한 이해와 웹 애플리케이션의 구조에 대해 이해할 수 있었습니다.\n나아가 입고, 저장, 출고, 재고차감의 일련의 과정들을 하나의 흐름으로 연결하면서 데이터 정합성의 중요성을 느낄 수 있었습니다.\n마지막으로 Java Swing GUI를 통한 개발로 비전공자였던 저에게 API문서 학습 및 API활용연습을 익혀 개발자로서 기초를 닦는데 도움이 된 프로젝트였습니다.'
-      },
-    ],
-    imageUrl: `${import.meta.env.BASE_URL}shinlogis.png`,
-    githubUrl: 'https://github.com/zero5ive/Shinlogis-WMS',
-  },
+  // {
+  //   title: 'Shinlogis-WMS',
+  //   description: '1. Java Swing 기반의 창고관리 시스템입니다. \n\n2. Java Swing API 문서를 직접 읽고 활용하며 공식 문서 학습 능력을 기른 첫 프로젝트입니다.\n\n3. JDBC: 데이터베이스와 직접 연결하여 SQL을 실행하고, 트랜잭션을 명시적으로 제어하며 출고·재고 처리의 정합성을 보장하기 위해 사용했습니다. \n\n4. MVC 패턴을 적용하여 UI, 비즈니스 로직, 데이터 처리를 분리했으며, Soft Delete 패턴으로 데이터 이력 관리와 복구 가능성을 확보했습니다.',
+  //   period: '2025.06.02 ~ 2025.06.29 (4주)',
+  //   team: '5명',
+  //   detailedDescription: [
+  //     {
+  //       title: '개요',
+  //       content: '창고 내 입고·출고·재고·보관을 종합적으로 관리하는 경량형 창고관리(WMS) 시스템입니다.\n\n실제 물류 프로세스(공급사 → 창고 → 지점)의 흐름을 기반으로, 출고 처리와 재고 차감, 파손 관리 등 핵심 업무를 수행할 수 있도록 설계되었습니다.',
+  //     },
+  //     {
+  //       title: '역할',
+  //       content: 'Java Swing 기반 클라이언트에서 출고(Outbound) 기능과 주문 조회 기능을 개발했습니다.\n\n1. 출고 예정 목록 조회, 주문 상세 조회 화면 구현\n2. 출고 확정 시 재고 차감 및 입출고 기록 저장 로직 개발\n3. 주문 데이터 필터 검색 기능 구현\n4. JDBC 기반 DAO 구성 및 SQL 작성',
+  //     },
+  //     {
+  //       title: 'Skills',
+  //       content: 'Backend : Java, JDBC \n\nFrontend(UI) : Java Swing\n\nDatabase : MySQL',
+  //     },
+  //     {
+  //       title: '출고(Outbound) 기능',
+  //       content: '### AS-IS\n- 기존 출고 흐름이 정리되어 있지 않아 작업자가 물류 프로세스를 단계별로 확인하기 어려웠음\n- 재고 차감, 출고 기록 저장, 파손 처리 등 각 기능이 분리되어 있어 연계 작업 중 데이터 불일치 가능성이 존재\n\n### TO-BE\n- 출고 조회 → 상세 확인 → 출고 확정까지 이어지는 단일 프로세스 흐름 완성\n- 출고 확정 시\n- 재고 자동 차감\n- 출고 기록 저장\n- 출고 상세 테이블 기록까지 일괄 처리\n- 파손/부분 출고 등 예외 처리 로직 반영\n- Swing UI와 DAO 로직 연동으로 실제 현장의 물류 처리 흐름을 반영',
+  //     },
+  //     {
+  //       title: '주문 조회(Order Inquiry)',
+  //       content: '### AS-IS\n- 주문을 창고/지점별로 필터링하거나 상세 데이터를 확인하는 기능이 부재\n- 주문번호로만 관리되어 작업 편의성이 떨어짐\n\n### TO-BE\n- 창고·지점 기준 주문 검색 기능 추가\n- 주문 상세 팝업 구현으로 제품별 수량/상세 정보 확인 가능\n- UI에서 검색 조건 선택 → DB 조회 → 테이블 렌더링 구조로 개선',
+  //     },
+  //     {
+  //       title: 'Soft Delete 적용',
+  //       content: '### AS-IS\n- 출고/주문 관련 기록을 삭제하면 데이터 추적이 불가능\n- 테스트 과정에서 실수로 삭제하면 데이터 무결성 붕괴 가능\n\n### TO-BE\n- 주요 테이블에 `is_active` 플래그 추가\n- 실제 삭제 대신 상태값 변경 방식으로 처리\n- 로그·이력 관리가 쉬워지고, 테스트 시 복구도 가능',
+  //     },
+  //     {
+  //       title: '개선할 점',
+  //       content: '- 출고 프로세스에 대한 로그 시스템 추가\n- 입고/재고 모듈과의 연동 강화\n- 실제 트랜잭션 기반 처리로 확장(SPRING 전환 시도 가능)',
+  //     },
+  //     {
+  //       title: '회고',
+  //       content: 'Java를 이용한 첫 팀 프로젝트로 팀원들과 역할을 분배해 협업하면서 UI 흐름 설계, 프로젝트의 방향성 통일등의 협업 경험을 할 수 있었고, 업무 도메인에 대한 이해와 웹 애플리케이션의 구조에 대해 이해할 수 있었습니다.\n나아가 입고, 저장, 출고, 재고차감의 일련의 과정들을 하나의 흐름으로 연결하면서 데이터 정합성의 중요성을 느낄 수 있었습니다.\n마지막으로 Java Swing GUI를 통한 개발로 비전공자였던 저에게 API문서 학습 및 API활용연습을 익혀 개발자로서 기초를 닦는데 도움이 된 프로젝트였습니다.'
+  //     },
+  //   ],
+  //   imageUrl: `${import.meta.env.BASE_URL}shinlogis.png`,
+  //   githubUrl: 'https://github.com/zero5ive/Shinlogis-WMS',
+  // },
 ];
 
 const Projects = () => {

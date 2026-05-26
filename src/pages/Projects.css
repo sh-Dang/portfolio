@@ -107,3 +107,12 @@
 .project-info p {
   white-space: pre-line;
 }
+
+.project-info h4 {
+  display: inline-block;
+  cursor: pointer;
+  text-underline-offset: 6px;
+}
+.project-info h4:hover::after {
+  width: 100%;
+}

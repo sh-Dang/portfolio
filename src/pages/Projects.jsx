@@ -106,6 +106,7 @@ const projects = [
     ],
     imageUrl: `${import.meta.env.BASE_URL}boardcicd.png`,
     githubUrl: 'https://github.com/sh-Dang/boardcicd',
+    demoUrl: 'http://134.185.108.155:3000/posts',
   },
   {
     title: 'Tabletopia',
@@ -267,10 +268,14 @@ const Projects = () => {
       <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index} onClick={() => window.open(project.demoUrl, '_blank')}>
+          <div className="project-card" key={index}>
             <img src={project.imageUrl} alt={project.title} className="project-image" />
             <div className="project-info">
-              <h4>{project.title}</h4>
+              <h4  style={{textDecoration: project.demoUrl ? 'underline': 'none',cursor: project.demoUrl ? 'pointer' : 'default', }}
+                onClick={() => {
+                  if(project.demoUrl) {window.open(project.demoUrl, '_blank');}
+                }}>
+              {project.title}</h4>
               <p>{project.description}</p>
               <div className="project-links">
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-button">

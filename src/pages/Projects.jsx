@@ -267,7 +267,7 @@ const Projects = () => {
       <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className="project-card" key={index} onClick={() => window.open(project.demoUrl, '_blank')}>
             <img src={project.imageUrl} alt={project.title} className="project-image" />
             <div className="project-info">
               <h4>{project.title}</h4>

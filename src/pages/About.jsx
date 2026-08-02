@@ -33,21 +33,25 @@ const About = () => {
       transition={pageTransition}
       className="section"
     >
+      {/* 이미지 배경 히어 비주얼 소개 박스 (좌우로 넓게 배치) */}
+      <div className="hero-box">
+        <h1 className="hero-title">안녕하세요<br></br>불편함과 문제해결을 즐기는 개발자 이세형입니다.</h1>
+      </div>
+
       <div className="about-me-container">
-        <img src={`${import.meta.env.BASE_URL}leesphoto.png`} alt="이세형 사진" className="profile-photo" />
-        
         <div className="about-me-text">
           <h2>About Me</h2>
           <p>
-            안녕하세요! 저는 Java 백엔드 개발자를 희망하고있는 이세형입니다.<br></br>
-            비전공자로 시작했지만, Java 백엔드 개발자 양성과정에서 Spring Boot 기반 웹 애플리케이션 개발 역량을 쌓았습니다.<br></br>
-            부트캠프 팀 프로젝트에서 팀장으로 개발 방향을 조율하며 협업경험을 쌓았으며<br></br>
-            다년간의 프랜차이즈 현장 근무경험으로 다양한 사람들과의 커뮤니케이션 역량과 문제상황 대처능력을 키웠습니다.
+            안녕하세요! 웹개발자 이세형입니다.<br></br>
+            저는 Java 백엔드 개발자 부트캠프로 시작하여 Spring기반 웹 애플리케이션 개발 역량을 쌓았습니다.<br></br>
+            6개월간의 팀 프로젝트에서 팀장으로 개발 방향을 조율하며 리더십과 협업경험을 쌓았으며<br></br>
+            다년간 다양한 업무환경에서 이해관계자들과 소통하며 원활한 커뮤니케이션 능력또한 길렀습니다.<br></br>
+            현재도 개발자로서 역량을 높이기 위해 새로운 기술과 언어를 꾸준히 학습하며 성장하고 있습니다.
           </p>
           <h2>Contacts</h2>
           <p>
+            Tel : 010-9009-0592<br></br>
             E-mail : henrys200632@gmail.com<br></br>
-            Phone : 010-9009-0592
             </p>
       <div className="social-links">
         <a href="https://github.com/sh-Dang" target="_blank" rel="noopener noreferrer" className="social-link">

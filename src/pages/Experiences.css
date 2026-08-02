@@ -1,0 +1,22 @@
+.section-content {
+  width: 100%;
+}
+
+.section-content h2 {
+  margin-bottom: 30px;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.section-content h2 {
+  grid-column: 1 / -1;
+}
+
+.experience-item {
+  width: 100%;
+  box-sizing: border-box;
+}

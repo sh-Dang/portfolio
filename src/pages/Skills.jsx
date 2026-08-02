@@ -33,7 +33,6 @@ const skillCategories = [
     title: 'Languages',
     skills: [
       { name: 'Java', logoUrl: javaLogo, proficiency: 70 }, //Java
-      { name: 'HTML', logoUrl: htmlLogo, proficiency: 80 }, //HTML
       { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', proficiency: 75 }, //javaScript
     ],
   },

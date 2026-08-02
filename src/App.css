@@ -2,24 +2,28 @@
   margin: 0;
   min-height: 100vh; /* 루트가 전체 뷰포트 높이를 덮도록 보장 */
   background-color: #112240; /* 콘텐츠 영역에 일관된 배경 설정 */
+  overflow-x: hidden;
 }
 
 .app-layout {
   display: flex;
-  padding-top: 80px; /* 고정된 헤더를 위한 패딩 추가 */
+  padding-top: 60px; /* 고정된 헤더 높이(60px)에 맞춤 */
 }
 
 .content {
-  margin-left: 150px; /* 사이드바 너비 + 약간의 패딩 */
-  padding: 20px;
   width: 100%;
-  padding-bottom: 80px; /* 푸터 겹침 방지를 위한 패딩 추가 */
+  padding: 0 0 80px 0; /* 상단 패딩을 제거하여 hero-box가 헤더에 바로 밀착 */
   background-color: #112240; /* 콘텐츠 영역에 일관된 배경 설정 */
 }
 
 .section {
   padding: 40px 20px;
   color: #ccd6f6; /* 섹션 텍스트가 밝은 테마 색상을 사용하도록 보장 */
+  scroll-margin-top: 60px;
+}
+
+#about {
+  padding-top: 0;
 }
 
 .section h2 {

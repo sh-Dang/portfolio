@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -14,7 +13,6 @@ function App() {
     <div className='app'>
       <Header />
       <div className="app-layout">
-        <Sidebar />
         <div className="content">
           <main className="main">
             {/* about me */}
@@ -46,3 +44,4 @@ function App() {
 }
 
 export default App;
+

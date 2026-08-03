@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Skills.css';
 import javaLogo from '../assets/javalogo.png';
-import htmlLogo from '../assets/htmllogo.png';
 import springLogo from '../assets/springlogo.png';
 import redisLogo from '../assets/redislogo.png';
 import jpaLogo from '../assets/jpalogo.png';
+import dockerLogo from '../assets/dockerlogo.png';
 
 const pageVariants = {
   initial: {
@@ -32,34 +32,33 @@ const skillCategories = [
   {
     title: 'Languages',
     skills: [
-      { name: 'Java', logoUrl: javaLogo, proficiency: 70 }, //Java
-      { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', proficiency: 75 }, //javaScript
+      { name: 'Java', logoUrl: javaLogo },
+      { name: 'JavaScript', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
     ],
   },
   {
     title: 'Frameworks & Libraries',
     skills: [
-      { name: 'Spring Boot', logoUrl: springLogo, proficiency: 65 }, //Spring Boot
-      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', proficiency: 60 }, //React
+      { name: 'Spring Boot', logoUrl: springLogo },
+      { name: 'React', logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
     ],
   },
   {
-    title: 'Databases/ORM',
+    title: 'Databases / ORM',
     skills: [
-      { name: 'MySQL', logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg', proficiency: 70 },
-      { name: 'Redis', logoUrl: redisLogo, proficiency: 50 },
-      { name: 'Hibernate', logoUrl: jpaLogo, proficiency: 50 }
+      { name: 'MySQL', logoUrl: 'https://static.cdnlogo.com/logos/m/10/mysql.svg' },
+      { name: 'Redis', logoUrl: redisLogo },
+      { name: 'JPA / Hibernate', logoUrl: jpaLogo },
     ],
   },
   {
-    title: 'Tools & Others',
+    title: 'Tools & DevOps',
     skills: [
-      { name: 'Github', logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg', proficiency: 80 },
-      { name: 'Docker', logoUrl: 'https://static.cdnlogo.com/logos/d/17/docker.svg', proficiency: 50 },
+      { name: 'Git / Github', logoUrl: 'https://static.cdnlogo.com/logos/g/46/git.svg' },
+      { name: 'Docker', logoUrl: dockerLogo },
     ],
   },
 ];
-
 
 const Skills = () => {
   return (
@@ -71,25 +70,18 @@ const Skills = () => {
       transition={pageTransition}
       className="section"
     >
-      <h2>Stacks</h2>
-      <div className="category-grid">
+      <h2>Skills</h2>
+      <div className="stacks-unified-card">
         {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
-            <h3>{category.title}</h3>
-            <div className="skills-grid">
+          <div key={index} className="stack-row">
+            <div className="stack-category-title">{category.title}</div>
+            <div className="stack-pills-container">
               {category.skills.map((skill, sIndex) => (
-                <div key={sIndex} className="skill-item">
-                  <div className="skill-card">
-                    <img src={skill.logoUrl} alt={`${skill.name} logo`} className="skill-logo" />
-                    <span>{skill.name}</span>
-                  </div>
-                  {/* <div className="proficiency-bar-container">
-                    <div
-                      className="proficiency-bar"
-                      style={{ width: `${skill.proficiency}%` }}
-                    ></div>
-                  </div>
-                  <span className="proficiency-text">{skill.proficiency}%</span> */}
+                <div key={sIndex} className="tech-pill">
+                  {skill.logoUrl && (
+                    <img src={skill.logoUrl} alt={`${skill.name} logo`} className="tech-pill-icon" />
+                  )}
+                  <span className="tech-pill-name">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -101,4 +93,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

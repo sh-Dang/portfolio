@@ -1,86 +1,92 @@
 .section {
   padding: 20px;
+  width: 60%;
+  margin: 0 auto;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px; /* 카테고리 사이의 간격 */
+.stacks-unified-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
 }
 
-.skill-category h3 {
-  color: #ccd6f6;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+.stack-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
-.skills-grid {
+.stack-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stack-category-title {
+  min-width: 210px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: -0.01em;
+}
+
+.stack-pills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
-  align-items: flex-start;
-  padding-left: 20px;
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
+  gap: 12px;
   align-items: center;
-  width: 120px;
+  flex: 1;
 }
 
-.skill-card {
-  background-color: #233554;
-  border: 1px solid #5078be;
-  border-radius: 8px;
-  padding: 20px;
-  width: 100px; /*스택 카드 프레임 크기*/
-  height: 100px;
-  display: flex;
-  flex-direction: column;
+.tech-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  margin-bottom: 10px;
+  gap: 10px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 24px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  cursor: default;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.tech-pill:hover {
+  background-color: var(--accent-subtle);
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
-/*스택 아이콘 크기 및 양식*/
-.skill-logo {
-  height: 80px;
-  width: 80px;
+.tech-pill-icon {
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
-.skill-card span {
-  color: #ccd6f6;
-  font-weight: bold;
+.tech-pill-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
-.proficiency-bar-container {
-  width: 100%;
-  background-color: #3a506b;
-  border-radius: 5px;
-  height: 8px;
-}
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
 
-.proficiency-bar {
-  height: 100%;
-  background-color: #64ffda;
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
+  .stack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .stack-category-title {
+    min-width: auto;
+  }
 }
-
-.proficiency-text {
-  color: #ccd6f6;
-  font-size: 0.9em;
-  margin-top: 5px;
-}
-

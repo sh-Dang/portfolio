@@ -1,10 +1,31 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --bg-primary: #FAF7F2;       /* Warm Ceramic Ivory */
+  --bg-surface: #FFFFFF;       /* Crisp White Card */
+  --bg-elevated: #F3EFE8;      /* Elevated Container / Highlight */
+  --bg-dark-accent: #2C2A29;   /* Warm Dark Charcoal */
+  
+  --text-primary: #2C2A29;     /* Deep Warm Charcoal */
+  --text-secondary: #706C67;   /* Warm Taupe Gray */
+  --text-muted: #9E9A93;       /* Light Muted Gray */
+  --text-inverse: #FAF7F2;     /* Inverse Text */
+
+  --accent-primary: #D97757;   /* Claude Signature Terracotta Amber */
+  --accent-hover: #C25E3E;     /* Terracotta Deep Hover */
+  --accent-subtle: #F8ECE6;    /* Soft Amber/Coral Tint */
+  --accent-border: #E8BFB0;    /* Terracotta Subtle Border */
+
+  --border-color: #E6E0D6;     /* Warm Soft Border */
+  --border-strong: #D5CFC5;    /* Stronger Border */
+
+  --shadow-sm: 0 2px 8px rgba(44, 42, 41, 0.04);
+  --shadow-md: 0 4px 16px rgba(44, 42, 41, 0.08);
+  --shadow-lg: 0 8px 24px rgba(44, 42, 41, 0.12);
+
+  --font-family: 'Plus Jakarta Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-  margin: 0px;
-  color: #ccd6f6; /* 어두운 배경을 위한 밝은 텍스트 색상 */
-  background-color: #0a192f; /* 어두운 네이비 배경 */
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,43 +36,60 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-a {
-  font-weight: 500;
-  color: #64ffda; /* 링크에 강조 색상 */
-  text-decoration: inherit;
-}
-a:hover {
-  color: #64ffda; /* 호버 시 강조 색상 유지 */
+  background-color: var(--bg-primary);
 }
 
 body {
   margin: 0 !important;
   overflow-x: hidden;
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3em;
+  line-height: 1.15;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 0.95em;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #112240; /* 버튼을 위한 더 밝은 네이비 */
-  color: #64ffda; /* 버튼 텍스트에 강조 색상 */
+  background-color: var(--bg-surface);
+  color: var(--accent-primary);
   cursor: pointer;
-  transition: border-color 0.25s;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
+
 button:hover {
-  border-color: #64ffda;
+  background-color: var(--accent-subtle);
+  border-color: var(--accent-border);
+  color: var(--accent-hover);
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }

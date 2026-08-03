@@ -1,118 +1,130 @@
 .section {
   padding: 20px;
+  width: 60%;
+  margin: 0 auto;
 }
 
-.section h2{
-  border-bottom: #64ffda 2px solid;
-  color: #e6f1ff;
+.section h2 {
+  border-bottom: var(--accent-primary) 2px solid;
+  color: var(--text-primary);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .project-card {
-  background-color: #233554; /* 다크 네이비/슬레이트 배경 */
-  border: 1px solid #5078be; /* 더 밝은 네이비/슬레이트 테두리 */
-  border-radius: 8px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-border);
 }
 
 .project-image {
   width: 100%;
   height: 200px;
   object-fit: contain;
-  background-color: #0a192f; /* 이미지 배경을 어둡게 처리 */
+  background-color: var(--bg-elevated);
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .project-info {
-  padding: 15px;
-  color: #ccd6f6; /* 밝은 텍스트 색상 */
+  padding: 20px;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-info h4 {
   margin-top: 0;
-  color: #64ffda; /* 제목에 더 밝은 색상 */
+  margin-bottom: 12px;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.project-info h4:hover {
+  color: var(--accent-hover);
 }
 
 .project-info .detailed-description {
   margin-top: 10px;
-  font-size: 0.9em;
-  color: #a8b2d1; /* 약간 더 부드러운 텍스트 색상 */
+  font-size: 0.92em;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .project-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 15px;
-  gap: 15px; /* 버튼과 링크 사이의 간격 */
+  margin-top: auto;
+  padding-top: 16px;
+  gap: 12px;
 }
 
 .toggle-button {
-  background: #e6f1ff;
-  color: #0a192f;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  background: var(--bg-elevated);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s, color 0.2s;
-  display: inline-flex; /* Flexbox 사용하여 내부 콘텐츠 정렬 */
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: normal; /* 라인 높이 정규화 */
 }
 
 .toggle-button:hover {
-  background: #0a192f;
-  color: #e6f1ff;
-}
-
-.project-info a {
-  text-decoration: none;
-  color: #0a192f;
-  font-weight: bold;
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+  border-color: var(--accent-primary);
 }
 
 .github-button {
-  background: #e6f1ff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  background: var(--bg-elevated);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s, color 0.2s;
-  text-decoration: none; /* 링크의 기본 밑줄 제거 */
-  display: inline-flex; /* Flexbox 사용하여 내부 콘텐츠 정렬 */
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: normal; /* 라인 높이 정규화 */
 }
 
 .github-button:hover {
-  background: #0a192f;
-  color: #e6f1ff;
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+  border-color: var(--accent-primary);
   text-decoration: none;
 }
 
 .project-info p {
   white-space: pre-line;
-}
-
-.project-info h4 {
-  display: inline-block;
-  cursor: pointer;
-  text-underline-offset: 6px;
-}
-.project-info h4:hover::after {
-  width: 100%;
+  line-height: 1.6;
 }

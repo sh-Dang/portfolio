@@ -48,8 +48,8 @@ const Experiences=()=>{
               <div className="experience-item">
                 <h3>Java 백엔드 개발자 양성과정 수료 | 2025.04 - 2025.10</h3>
                 <ul>
-                  <li>Java, Spring Boot 기반 웹 애플리케이션 개발 및 RESTful API 설계·구현</li>
-                  <li>외부API(Toss Payments) 연동을 통한 결제 기능 구현 및 결제 프로세스 구축</li>
+                  <li>Java, Spring 기반 웹 애플리케이션 개발 및 RESTful API 설계·구현</li>
+                  <li>외부API(Toss Payments) 연동을 통한 결제기능 및 결제 프로세스 구축</li>
                   <li>MySQL을 활용한 데이터베이스 설계, 쿼리 최적화 및 트랜잭션 관리</li>
                   <li>Git / Jira를 활용한 버전 관리 및 협업 개발 프로세스 경험</li>
                   <li>API 명세서 및 코딩 컨벤션 작성 등 개발 가이드라인 수립 경험</li>
